@@ -1,13 +1,9 @@
 # deepin系统终端命令
 ## 基本命令
 您可以通过以下命令来查看系统的信息，其他系统相关命令操作可自行搜索查询。  
-
-查看系统版本 cat /etc/deepin-version  
-  
+查看系统版本 cat /etc/deepin-version   
 查看内核版本 uname -a 
-
 查看软件源信息 cat /etc/apt/sources.list 
-
 查看命令帮助 man chmod 或 chmod --help  
 
 
