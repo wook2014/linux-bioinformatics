@@ -37,4 +37,8 @@
 ## 网易邮箱大师
 [网易邮箱大师](http://client.dl.126.net/pcmail/dashi/mail.exe)
 
+## 网易云音乐
+[网易云音乐](https://d1.music.126.net/dmusic/7ee2/2019830102012/cloudmusicsetup2.5.6.197958.exe)
+
+
 
