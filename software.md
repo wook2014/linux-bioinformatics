@@ -12,4 +12,29 @@
 ## 桌面日历
 [桌面日历](http://download.desktopcal.com/desktopcal-setup-v2.exe)
 
+## notepad++
+[notepad++](http://download.notepad-plus-plus.org/repository/7.x/7.7.1/npp.7.7.1.Installer.x64.exe)
+
+## 百度网盘
+[百度网盘](http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_6.8.1.3.exe)
+
+## mobaxterm
+[mobaxterm](https://download.mobatek.net/1232019093005654/MobaXterm_Installer_v12.3.zip)
+
+## bandzip
+[bandzip](https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE)
+
+## picpick
+[picpick](https://www.picpick.org/releases/latest/picpick_inst.exe)
+
+## 有道词典
+[youdao](http://codown.youdao.com/cidian/YoudaoDict_webdict_default.exe)
+
+
+## typora
+[typora](https://www.typora.io/windows/typora-setup-x64.exe)
+
+## 网易邮箱大师
+[网易邮箱大师](http://client.dl.126.net/pcmail/dashi/mail.exe)
+
 
