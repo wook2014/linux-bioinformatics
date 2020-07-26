@@ -22,6 +22,7 @@ ffmpeg -i video.flv video.mpg
 ffmpeg -i test.mp4 -ab 56 -ar 22050 -qmin 2 -qmax 16 -b 320k -r 15 -s 320x240 outputfile.flv     #mp4 转 flv  
       
 ffmpeg -i outputfile.flv -copyts -strict -2 test.mp4       #flv 转 mp4  
+for i in *.wav;do ffmpeg -i "$i" -f mp3 "${i}.mp3";done
 ···
 
 ##视频裁剪
