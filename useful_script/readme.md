@@ -1,5 +1,6 @@
 # 搜集一些好用的脚本
 
+## Python脚本
 * fq2fa_need_to_change_file_path.py
 每次使用需要进该文件修改要操作的fastq文件的file path
 
@@ -8,10 +9,10 @@
 
 
 
+## Perl脚本
 
 
 
 
-
-
+## R脚本
 
