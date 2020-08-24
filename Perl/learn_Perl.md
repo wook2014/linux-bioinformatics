@@ -58,6 +58,6 @@ n";
 print "$revcom\n";
 exit;
 ```
-
+![tr]<https://github.com/xujunbi/linux-bioinformatics/blob/master/Perl/Img/tr_usage.tiff>
 
 
