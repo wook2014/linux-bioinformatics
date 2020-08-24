@@ -58,5 +58,5 @@ n";
 print "$revcom\n";
 exit;
 ```
-![](https://github.com/xujunbi/linux-bioinformatics/blob/master/Perl/Img/tr_usage.jpg)
+![tr](https://github.com/xujunbi/linux-bioinformatics/blob/master/Perl/Img/tr_usage.jpg)
 
