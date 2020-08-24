@@ -43,8 +43,21 @@ print "$RNA\n";
 exit;
 ```
 
+3.反向互补
+```perl
+#!/usr/bin/perl -w
+$DNA = 'ACGGGAGGACGGGAAAATTACTACGGCATTAGC';
 
+# reverse 函数：反转字符串等元素的顺序
+$revcom = reverse $DNA;
 
+# tr 函数：一次性把一个字符集翻译成新的字符
+$revcom =~ tr/ACGTacgt/TGCAtgca/;
+print "Here is the reverse complement DNA:\n\
+n";
+print "$revcom\n";
+exit;
+```
 
 
 
