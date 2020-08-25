@@ -19,7 +19,7 @@ exit;
 双引号（" "）能够进行变量内插，可以使用转义字符。
 
 4.数组
-数组中的每一个元素都是**标量值**
+数组中的每一个元素都是**标量值**；
 通过索引/下标/偏移量/位置（从**0**开始）对数组中的元素进行访问
 
 ---
@@ -76,7 +76,60 @@ close PROTEINFILE;
 exit;
 ```
 
+5.数组基本操作
+```perl
+@bases = ('A', 'C', 'G', 'T');
+# 元素肩并肩地输出
+print @bases; # ACGT
+# 输出用空格分隔的元素（注意print语句中的双引号）
+print "@bases"; # A C G T
 
+# pop：从数组的末尾拿掉一个元素
+$base1 = pop @bases; # @bases A C G 
+
+# shift：从数组的开头拿掉一个元素
+$base2 = shift @bases; # @bases C G
+
+# unshift：把一个元素添加到数组的开头
+unshift (@bases, $base1); # @bases T C G
+
+# push：把一个元素添加到数组的末尾
+push (@bases, $base2); # @bases T C G A
+
+# reverse：反转数组
+@reverse = reverse @bases; # @reverse A G C T
+
+# scalar @array：获取数组的长度（数组中元素的个数）
+$nu = scalar @bases # 4
+
+# splice：在数组的任意一个位置插入一个元素（或者删除任意一个或多个元素）
+# 语法：OFFSET 和 LENGTH 定义了 ARRAY 中将要删除的部分， LIST 表示在删除的位置上要添加的元素。 如果LIST 省略，表示只删除，不增加。
+splice ARRAY, OFFSET, LENGTH, LIST
+# 在 LIST 情境 splice 返回移除的值.
+my @others = qw(SnowWhite Humbert);
+my @dwarfs = qw(Doc Grumpy Happy Sleepy Sneezy Dopey Bashful);
+my @who = splice @dwarfs, 3, 2, @others;
+print "@who\n"; # Sleepy Sneezy
+
+#在 SCALAR 情境，返回最后一个移除的值，如果没有值被移除，则返回 undef。
+my @others = qw(SnowWhite Humbert);
+my @dwarfs = qw(Doc Grumpy Happy Sleepy Sneezy Dopey Bashful);
+my $who = splice @dwarfs, 3, 2, @others;
+print "$who\n"; # Sneezy
+
+#参数为负值？
+#偏移值(OFFSET)和长度(LENGTH)值都可以为负数，表示从数组的末尾算起。
+
+my @dwarfs = qw(Doc Grumpy Happy Sleepy Sneezy Dopey Bashful);
+my @who = splice @dwarfs, 3, -1;
+print "@who"; # Sleepy Sneezy Dopey
+#偏移为3，即从第四个算起，-1 表示直到整个数组的倒数第一个。
+
+my @dwarfs = qw(Doc Grumpy Happy Sleepy Sneezy Dopey Bashful);
+my @who = splice @dwarfs, -3, 1;
+print "@who"; # Sneezy
+#从倒数第三个开始，向右移除的第一个元素。
+```
 
 
 
