@@ -18,6 +18,10 @@ exit;
 单引号（' '）不会进行变量内插。
 双引号（" "）能够进行变量内插，可以使用转义字符。
 
+4.数组
+数组中的每一个元素都是**标量值**
+通过索引/下标/偏移量/位置（从**0**开始）对数组中的元素进行访问
+
 ---
 
 ## 常用操作
@@ -59,4 +63,33 @@ print "$revcom\n";
 exit;
 ```
 ![tr](https://github.com/xujunbi/linux-bioinformatics/blob/master/Perl/Img/tr_usage.jpg)
+
+
+4.文件读取
+```perl
+#!/usr/bin/perl -w
+$proteinfilename = 'NM_021964fragment.pep';
+open( PROTEINFILE, $proteinfilename );
+@protein = <PROTEINFILE>;
+print @protein;
+close PROTEINFILE;
+exit;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
