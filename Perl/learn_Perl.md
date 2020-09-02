@@ -66,6 +66,17 @@ perltidy *.pl
 
 **local**
 
+**substr**
+```perl
+$base = substr($DNA, $position, 1)
+```
+substr可以对字符串进行插入或者删除操作
+第一个参数指定要操作的字符串
+第二个参数指定要操作的位置索引（负值表示从字符串末尾开始）
+第三个参数指定要操作的长度（负值表示字符串末尾剩余的字符数）
+第四个参数指定要替换成的字符串
+
+
 ---
 
 
@@ -114,10 +125,12 @@ exit;
 4.文件读取
 ```perl
 #!/usr/bin/perl -w
-$proteinfilename = 'NM_021964fragment.pep';
-open( PROTEINFILE, $proteinfilename );
+$proteinfilename = <STDIN>;
+chomp $proteinfilename;
+unless ( open( PROTEINFILE, $proteinfilename ) ) {
+print "Cannot open file \"$proteinfilename\"\n\n"; exit;
+}
 @protein = <PROTEINFILE>;
-print @protein;
 close PROTEINFILE;
 exit;
 ```
@@ -177,9 +190,10 @@ print "@who"; # Sneezy
 #从倒数第三个开始，向右移除的第一个元素。
 ```
 
-6.文件读取与模式匹配
+6.模式匹配
 ```perl
 #!/usr/bin/perl -w
+# 文件读取
 $proteinfilename = <STDIN>;
 chomp $proteinfilename;
 unless ( open( PROTEINFILE, $proteinfilename ) ) {
@@ -187,6 +201,8 @@ print "Cannot open file \"$proteinfilename\"\n\n"; exit;
 }
 @protein = <PROTEINFILE>;
 close PROTEINFILE;
+# 查找基序
+# 将文件中的各行字符串连成一行
 $protein = join( '', @protein );
 $protein =~ s/\s//g;
 do {
@@ -204,6 +220,7 @@ exit;
 
 ```
 
+7.文件写入
 
 
 
