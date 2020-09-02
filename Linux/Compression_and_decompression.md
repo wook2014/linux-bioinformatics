@@ -44,7 +44,7 @@ tar -jcvf test.tar.bz2 file1 file2 #打包，并以bzip2压缩
 ```bash
 tar -tvf test.tar #可查看test包中有哪些文件
 ```
-==打包后删除源文件==
+<font color=red>打包后删除源文件</font>
 有时候在打包后可能需要删除源文件，但一个个删除显得麻烦，我们可以使用--remove-files 选项：
 ```bash
 tar -zcvf test.tar.gz test.log --remove-files 
