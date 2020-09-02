@@ -3,7 +3,7 @@
 ## 前言
 Linux常用命令中，有很多用于对文件的压缩或解压，本文将介绍这些解压缩命令中不常见却非常实用的用法。
 
-tar
+## tar
 tar是linux中最常用的解压缩命令。tar命令可用于处理后缀名为tar，tar.gz，tgz，.tar.Z，tar.bz2的文件。
 涉及参数说明：
 ```bash
@@ -44,7 +44,7 @@ tar -jcvf test.tar.bz2 file1 file2 #打包，并以bzip2压缩
 ```bash
 tar -tvf test.tar #可查看test包中有哪些文件
 ```
-打包后删除源文件
+==打包后删除源文件==
 有时候在打包后可能需要删除源文件，但一个个删除显得麻烦，我们可以使用--remove-files 选项：
 ```bash
 tar -zcvf test.tar.gz test.log --remove-files 
@@ -110,7 +110,7 @@ tar -xvkf test.tar.gz
 特别提醒
 前面所提到的解压或者压缩带的f参数需要放在最后，因为它指定了压缩包名字，否则会出现解压或压缩失败。
 
-zip/unzip
+## zip/unzip
 zip和unzip命令主要用于处理zip包。
 
 
@@ -188,7 +188,7 @@ jar包是java归档包，但同样可用unzip解压查看里面的文件：
 ```bash
 unzip -o java.jar -d dir
 ```
-gzip
+## gzip
 涉及参数说明：
 ```bash
 -k 保留源文件
@@ -204,25 +204,25 @@ gzip -rkv ./* 递归压缩
 ```bash
 gzip -dv test.gz 
 ```
-bzip2
+## bzip2
 tar命令使用-j参数将文件打包为tar.bz2时，便调用了bzip2进行压缩。bzip2压缩或解压后，会将源文件删除。如果需要保留源文件，可使用-k参数：
 ```bash
 bzip2 -zk test  #压缩test文件
 bzip2 -dk test.bz2  #解压
 ```
-rar/unrar
+## rar/unrar
 rar和unrar命令并非linux发行版自带命令，需要另外安装。常见用法如下：
 ```bash
 rar a test.tar test  #将test文件压缩为test.tar
 rar e test.rar       #解压test.tar
 unrar x test.rar     #解压test.tar
 ```
-压缩率比较
+## 压缩率比较
 压缩率一般来说：
 ```bash
 tar.bz2>tar.gz>zip>tar
 ```
 压缩率越高，压缩以及解压的时间也就越长。
 
-总结
+## 总结
 对文件进行压缩能够节省磁盘空间，进行网络传输时，也能节省带宽，但是需要注意的是，空间和时间是需要根据实际应用进行权衡的。解压缩命令较多，为避免在其他平台使用不便，可选择常用命令进行压缩文件。
