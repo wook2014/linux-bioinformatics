@@ -44,19 +44,19 @@ perltidy *.pl
 
 6.基本函数
 
-**print**
+**print**\n
 向标准输出打印文本
 
-**chomp**
+**chomp**\n
 删除变量末尾的（多个）换行符，返回删除的换行符的个数
 
-**join**
+**join**\n
 把数组元素或者几个字符串通过分隔符连接成单个字符串
 
-**split**
+**split**\n
 与join函数功能恰好相反，是通过指定的分隔符把字符串分割成一个一个的字段，形成一个数组返回
 
-**open**
+**open**\n
 open函数用于打开文件
 ```perl
 open (my $fh, "<","test.txt") or die "Can't open < test.txt: $!";
@@ -65,7 +65,7 @@ open (my $fh, "<","test.txt") or die "Can't open < test.txt: $!";
 # test.txt是我们要打开的文件的名称。它必须存在于正确的目录底下。
 # or die "Can't open < test.txt:$!" 表示如果计算机无法打开文件，它将显示错误信息。 $ _存储错误信息。
 ```
-**close**
+**close**\n
 关闭文件
 ```perl
 close($fh)  or "Couldn't close the file: $!";
