@@ -221,7 +221,18 @@ exit;
 ```
 
 7.文件写入
-
+```perl
+#!/usr/bin/perl -w
+$outputfile = "countbase";
+unless ( open( COUNTBASE, ">$outputfile" ) ) {
+print "Cannot open file \"$outputfile\" to
+write to!!\n\n";
+exit;
+}
+print COUNTBASE "A=$a C=$c G=$g T=$t errors=$e\n";
+close(COUNTBASE);
+exit;
+```
 
 
 
