@@ -73,9 +73,6 @@ open (my $fh, "<","test.txt") or die "Can't open < test.txt: $!";
 ```
 close($fh)  or "Couldn't close the file: $!";
 
-**my**
-
-**local**
 
 **substr**
 ```perl
@@ -87,6 +84,11 @@ substr可以对字符串进行插入或者删除操作
 第三个参数指定要操作的长度（负值表示字符串末尾剩余的字符数）
 第四个参数指定要替换成的字符串
 
+7.变量作用域
+
+1.变量范围分为两类：全局、局部
+2.全局变量标准（our）关键字、局部变量标准（my）关键字
+3.（local）关键字将全局变量临时借用为局部、（state）关键字将局部变量变得持久
 
 ---
 
