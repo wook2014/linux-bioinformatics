@@ -58,9 +58,20 @@ perltidy *.pl
 与join函数功能恰好相反，是通过指定的分隔符把字符串分割成一个一个的字段，形成一个数组返回
 
 **open**
-
+open函数用于打开文件
+```perl
+open (my $fh, "<","test.txt") or die "Can't open < test.txt: $!";
+# $fh是文件句柄，后面我们将通过文件句柄来引用该文件。
+# < 表示以读模式打开文件，这意味着我们无法在该文件上写入任何内容。
+# test.txt是我们要打开的文件的名称。它必须存在于正确的目录底下。
+# or die "Can't open < test.txt:$!" 表示如果计算机无法打开文件，它将显示错误信息。 $ _存储错误信息。
+```
 **close**
-
+关闭文件
+```perl
+可以操作已经打开的文件句柄来关闭文件
+```
+close($fh)  or "Couldn't close the file: $!";
 
 **my**
 
