@@ -50,7 +50,7 @@ perltidy *.pl
 **chomp**
 + 删除变量末尾的（多个）换行符，返回删除的换行符的个数
 
-**join**\n
+**join**
 + 把数组元素或者几个字符串通过分隔符连接成单个字符串
 
 **split**
@@ -66,7 +66,7 @@ open (my $fh, "<","test.txt") or die "Can't open < test.txt: $!";
 # or die "Can't open < test.txt:$!" 表示如果计算机无法打开文件，它将显示错误信息。 $ _存储错误信息。
 ```
 **close**
-关闭文件
++ 关闭文件
 ```perl
 close($fh)  or "Couldn't close the file: $!";
 # 可以操作已经打开的文件句柄来关闭文件
@@ -292,9 +292,28 @@ close(COUNTBASE);
 exit;
 ```
 
+8.子程序
++ 调用：子程序的名字后跟小括号包裹起来的参数列表（可以没有参数，多个参数要用逗号进行分隔）
++ 程序分块
+    + 主程序/程序的主体（从开头到exit 命令结束）
+    + 子程序的定义（剩余部分）
++ 子程序通常集中放在程序的末尾（以字母顺序或者出现顺序等进行排列）
++ 返回值
+    + 使用return 函数返回子程序的结果
+    + 可以返回：标量、标量列表、数组，等
 
-
-
+```perl
+#!/usr/bin/perl -w
+$dna = 'CGACGTCTTCTCAGGCGA';
+$longer_dna = addACGT($dna);
+$longer_dna\n\n";
+exit;
+sub addACGT {
+my ($dna) = @_;
+$dna .= 'ACGT';
+return $dna;
+}
+```
 
 
 
