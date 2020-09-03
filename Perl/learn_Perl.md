@@ -72,7 +72,34 @@ close($fh)  or "Couldn't close the file: $!";
 # 可以操作已经打开的文件句柄来关闭文件
 ```
 
+**tr**
+```perl
+（1）/c表示把匹配不上的字符进行替换.
+$temp="AAAABCDEF";
+$count=$temp=~tr/A/H/c;
+print "$temp\t$count\n";
+结果：AAAAHHHHH 5
 
+（2）/d:表示把匹配上的字符全部替换
+$temp="AAAABCDEF";
+$count=$temp=~tr/A/H/d;
+print "$temp\t$count\n";
+结果：HHHHBCDEF 4
+
+(3)/s：表示如果要替换的字符中出现连续多个一样的字符，则去冗余：
+$temp="AAAABCDEF";
+$count=$temp=~tr/A/H/ds;
+print "$temp\t$count\n";
+结果：HBCDEF 4
+
+$temp="AAAABCDEF";
+$count=$temp=~tr/A/H/cs;
+print "$temp\t$count\n";
+结果：AAAAH 5
+
+$count=$temp=~tr/A//; #表示计算$temp中出现A的次数，$temp并不改变值
+$count=$temp=~tr/A/A/; #表示计算$temp中出现A的次数，$temp并不改变值
+```
 
 **substr**
 ```perl
