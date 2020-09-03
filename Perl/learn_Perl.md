@@ -308,6 +308,7 @@ $dna = 'CGACGTCTTCTCAGGCGA';
 $longer_dna = addACGT($dna);
 $longer_dna\n\n";
 exit;
+
 sub addACGT {
 my ($dna) = @_;
 $dna .= 'ACGT';
