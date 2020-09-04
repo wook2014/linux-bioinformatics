@@ -17,6 +17,12 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/m
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
 conda config --set show_channel_urls yes
+
+# 新建一个专用环境（环境名字自己选定即可）
+conda create -n bx_exp
+source activate bx_exp
+# 进行后续实验，实验结束后，记得退出环境：
+source deactivate bx_exp
 ```
 
 
