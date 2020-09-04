@@ -1,4 +1,4 @@
-# conda的常见操作
+# conda的基本操作
 
 
 ```bash
