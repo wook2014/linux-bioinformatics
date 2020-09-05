@@ -138,6 +138,27 @@ use strict;
 
 -程序设计存在逻辑缺陷 ⋯⋯
 
+10.bug调试的方法
++ use warnings;和use strict;
+```perl
+use warnings;
+use strict;
+```
++ 选择性注释
++ 添加print 语句
++ Perl 调试器
+    + 启动
+	```perl
+	# 交互式运行
+	perl -d script.pl # 在shell命令行上
+
+	# 自动启动
+	#!/usr/bin/perl -d # 在Perl脚本中
+	```
+	+ 停止
+		+ 在调试器中输入q 即可。
+
+
 
 ## 常用操作
 1.序列拼接
