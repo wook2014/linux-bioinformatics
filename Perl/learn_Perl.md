@@ -442,6 +442,7 @@ print randomnucleotide(@nucleotides), " ";
 }
 print "\n";
 exit;
+
 sub randomnucleotide {
 my(@nucs) = @_;
 return $nucs[rand @nucs];
