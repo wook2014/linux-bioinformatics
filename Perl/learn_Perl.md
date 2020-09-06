@@ -379,9 +379,10 @@ exit;
 #!/usr/bin/perl -w
 $dna = 'CGACGTCTTCTCAGGCGA';
 $longer_dna = addACGT($dna);
-$longer_dna\n\n";
+print "$longer_dna\n\n";
 exit;
 
+# 子程序
 sub addACGT {
 my ($dna) = @_;
 $dna .= 'ACGT';
