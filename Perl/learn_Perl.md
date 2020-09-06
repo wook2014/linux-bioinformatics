@@ -400,7 +400,7 @@ return $dna;
     + 可以返回：标量、标量列表、数组，等
     
 
-9.随机程序
+9.随机选取字符串的位置
 ```perl
 #!/usr/bin/perl -w
 # 用于随机选择一段DNA的位置
@@ -425,7 +425,6 @@ my($string) = @_;
 return int rand length $string;
 # 上面的语句等同于return int (rand (length $string));
 }
-
 
 ```
 
