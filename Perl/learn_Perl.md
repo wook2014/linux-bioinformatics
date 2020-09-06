@@ -429,7 +429,26 @@ return int rand length $string;
 
 ```
 
+10.随机选取数组的元素
 
+```perl
+# 选取随机核苷酸
+#!/usr/bin/perl -w
+
+my @nucleotides = ('A', 'C', 'G', 'T');
+srand(time|$$);
+for (my $i=0 ; $i < 20 ; ++$i ) {
+print randomnucleotide(@nucleotides), " ";
+}
+print "\n";
+exit;
+sub randomnucleotide {
+my(@nucs) = @_;
+return $nucs[rand @nucs];
+# 等同于$nucs[ int( rand( scalar @nucs ) ) ]，或是没有小括号的写法 $nucs[ int rand scalar @nucs ]
+}
+
+```
 
 
 
