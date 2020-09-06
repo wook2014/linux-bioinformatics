@@ -397,7 +397,34 @@ return $dna;
 }
 ```
 
+9.随机程序
+```perl
+#!/usr/bin/perl -w
+# 用于随机选择一段DNA的位置
+my $dna = 'AACCGTTAATGGGCATCGATGCTATGCGAGCT';
 
+# srand; 会自动设置种子
+# rand 会自动调用srand; 设置种子
+# time 返回代表时间的数
+# $$ 返回运行的Perl 程序的PID（每次运行都会改变）
+# | 表示位元的或运算（bitwise OR），把两个数的位（bit）组合起来，
+# 逻辑或：0 or 0 = 0；0 or 1 = 1；1 or 0 = 1；1 or 1 = 1
+
+srand(time|$$);
+for (my $i=0 ; $i < 20 ; ++$i ) {
+print randomposition($dna), " ";
+}
+print "\n";
+exit;
+
+sub randomposition {
+my($string) = @_;
+return int rand length $string;
+# 上面的语句等同于return int (rand (length $string));
+}
+
+
+```
 
 
 
