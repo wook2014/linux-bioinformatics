@@ -416,6 +416,7 @@ my $dna = 'AACCGTTAATGGGCATCGATGCTATGCGAGCT';
 srand(time|$$);
 for (my $i=0 ; $i < 20 ; ++$i ) {
 print randomposition($dna), " ";
+# 12 26 31 21 8 0 28 23 19 10 23 22 8 31 10 25 18 24 10 14
 }
 print "\n";
 exit;
