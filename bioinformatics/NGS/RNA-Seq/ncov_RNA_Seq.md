@@ -1,4 +1,4 @@
-# sars-cov-2 RNA-Seq
+# SARS-Cov-2 RNA-Seq
 
 ## 软件安装
 ```bash
@@ -52,9 +52,14 @@ nohup samtools sort -@ 10 -o SWTA0402A.sorted.bam WTA0402A.bam &
 ### flagstat
 ```bash
 nohup samtools flagstat SWTA0402A.sorted.bam > SWTA0402A.bam.stat &
+rm *sam
 ```
 
-
+## counts
+```bash
+featureCounts -T 20 -p -t GTF第三列 -g GTF第9列 -a GTF文件 ${i}.sorted.bam -o ${i}.counts
+# 命令待改
+```
 
 
 
