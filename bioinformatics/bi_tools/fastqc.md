@@ -17,12 +17,12 @@
 
 2.fastqc结果查看
 1. 产生两个结果文件：
-html：网页版结果
-zip：本地结果压缩文件
++ html：网页版结果
++ zip：本地结果压缩文件
 
 
 网页版结果
-网页版结果页面左上角是一个summary:  
+网页版结果页面左上角是一个summary,就是整个报告的目录，整个报告分成若干个部分。合格会有个绿色的对勾，警告是个“!”，不合格是个红色的叉子。  
 ![summary](https://upload-images.jianshu.io/upload_images/7493830-979e62961335827f?imageMogr2/auto-orient/strip|imageView2/2/w/274/format/webp)  
 
 需要重点关注的结果：
