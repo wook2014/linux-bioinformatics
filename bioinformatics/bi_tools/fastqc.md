@@ -27,6 +27,11 @@
 
 需要重点关注的结果：
 + Basic Statistics：**对数据量的概览**
+	+ ![summary](https://pic2.zhimg.com/b19f28a107a90f7c4f7b02510c7884ab_r.jpg)  
+	+ Encoding指测序平台的版本和相应的编码版本号，这个在计算Phred反推error P的时候有用，如果不明白可以参考之前的文章。
+	+ Total Sequences记录了输入文本的reads的数量
+	+ Sequence length 是测序的长度
+	+ %GC 是我们需要重点关注的一个指标，这个值表示的是整体序列中的GC含量，这个数值一般是物种特意的，比如人类细胞就是42%左右。
 + Per base sequence quality：reads每个位置测序质量最直接的展示
 + Per sequence quality scores：总体reads测序质量趋势
 + Per base sequence content：ATGC含量估计测序是否存在偏差
@@ -43,3 +48,4 @@
 
 
 
+	
