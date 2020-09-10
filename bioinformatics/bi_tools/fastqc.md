@@ -22,11 +22,11 @@ zip：本地结果压缩文件
 
 
 网页版结果
-网页版结果页面左上角是一个summary:
-![summary](https://upload-images.jianshu.io/upload_images/7493830-979e62961335827f?imageMogr2/auto-orient/strip|imageView2/2/w/274/format/webp)
-2.需要重点关注的结果：
+网页版结果页面左上角是一个summary:  
+![summary](https://upload-images.jianshu.io/upload_images/7493830-979e62961335827f?imageMogr2/auto-orient/strip|imageView2/2/w/274/format/webp)  
 
-+ Basic Statistics：**对数据量的概览
+需要重点关注的结果：
++ Basic Statistics：**对数据量的概览**
 + Per base sequence quality：reads每个位置测序质量最直接的展示
 + Per sequence quality scores：总体reads测序质量趋势
 + Per base sequence content：ATGC含量估计测序是否存在偏差
