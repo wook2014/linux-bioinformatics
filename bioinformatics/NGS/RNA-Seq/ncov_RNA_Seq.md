@@ -43,11 +43,16 @@ nohup hisat2 -p 10 -x ./ana_v/ncov -1 WTA0402A_R1_001.fastq.gz -2 WTA0402A_R2_00
 ```bash
 nohup samtools view -bS WTA0402A.sam | samtools sort -@ 10 - WTA0402A.sorted &
 # 或
+# sam2bam
 nohup samtools view -bS WTA0402A.sam > WTA0402A.bam &
-nohup samtools sort -@ 8 - Sample.sorted &
+# sort
+nohup samtools sort -@ 10 -o SWTA0402A.sorted.bam WTA0402A.bam &
 ```
 
-
+### flagstat
+```bash
+nohup samtools flagstat SWTA0402A.sorted.bam > SWTA0402A.bam.stat &
+```
 
 
 
