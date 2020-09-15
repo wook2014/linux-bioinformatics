@@ -1,7 +1,7 @@
 # linux-bioinformatics
 
-## AWK
-AWK学习记录
+## Linux
+Linux学习记录
 
 ## software
 Linux中能安装的好用的软件
@@ -10,19 +10,19 @@ Linux中能安装的好用的软件
 生信相关
 
 ## useful_script
-搜集一些好用的脚本
+好用的脚本
 
 ## common_command.md
 Linux中的常见命令
 
 ## Python
-Python使用集合
+Python学习
 
 ## Perl
-Perl使用集合
+Perl学习
 
 ## R
-R使用集合
+R学习
 
 ## latex template
 我的latex模板
