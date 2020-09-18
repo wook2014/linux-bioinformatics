@@ -49,8 +49,45 @@ cat("RUNOOB", file="/Users/runoob/runoob-test/r_test.txt")
 cat("RUNOOB", file="D:\\r_test.txt")
 # 注意：这个操作是"覆盖写入"操作，请谨慎使用，因为它会将输出文件的原有数据清除。如果想"追加写入"，请不要忘记设置 append 参数：
 cat("GOOGLE", file="/Users/runoob/runoob-test/r_test.txt", append=TRUE)
+
+# sink() 函数可以把控制台输出的文字直接输出到文件中去：
+# 注意：这个操作也是"覆盖写入"操作，会直接清除原有的文件内容。如果我们依然像保留控制台的输出，可以设置 split 属性：
+sink("/Users/runoob/runoob-test/r_test.txt", split=TRUE)
+
+# 如果想取消输出到文件，可以调用无参数的 sink ：
+sink()
 ```
 
-sink() 函数可以把控制台输出的文字直接输出到文件中去：
++ 从文件读入文字
+```R
+# 如果纯粹的想将某个文件中的内容读取为字符串，可以使用 readLines 函数：
+readLines("/Users/runoob/runoob-test/r_test.txt")
+# 注意：所读取的文本文件每一行 (包括最后一行) 的结束必须有换行符，否则会报错。
+```
+
+3.工作目录
+```R
+# 当前工作目录
+print(getwd())
+
+# 设置当前工作目录
+setwd("/Users/runoob/runoob-test2")
+```
+
+## 数学函数
+函数 |	说明
+-- |--
+sqrt(n)	 |	n的平方根
+exp(n)	 |	自然常数e的n次方，
+log(m,n) |		n的对数函数，返回n的几次方等于m
+log10(m) |		相当于log(m,10)
+
+
+
+
+
+
+
+
 
 
