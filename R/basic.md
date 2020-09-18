@@ -75,13 +75,15 @@ setwd("/Users/runoob/runoob-test2")
 ```
 
 ## 数学函数
-函数 |	说明
+数学函数 |	说明
 -- |--
 sqrt(n)	 |	n的平方根
 exp(n)	 |	自然常数e的n次方，
-log(m,n) |		n的对数函数，返回n的几次方等于m
-log10(m) |		相当于log(m,10)
-
+log(m,n) |	n的对数函数，返回n的几次方等于m
+log10(m) |	相当于log(m,10)
+round(n, m) |	对 n 保留 m 位小数四舍五入
+ceiling	(n) |	对 n 向上取整
+floor(n) |	对 n 向下取整
 
 
 
