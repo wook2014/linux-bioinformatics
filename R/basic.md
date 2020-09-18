@@ -227,14 +227,51 @@ b 4 5 6
 [1] 4 6
 ```
 
+### 列表
 
++ 创建列表
+```R
+list_data <- list("runoob", "google", c(11,22,33), 123, 51.23, 119.1)
+```
 
++ 列表的元素命名
+```R
+# 列表包含向量、矩阵、列表
+list_data <- list(c("Google","Runoob","Taobao"), matrix(c(1,2,3,4,5,6), nrow = 2),
+   list("runoob",12.3))
 
+# 给列表元素设置名字
+names(list_data) <- c("Sites", "Numbers", "Lists")
+```
++ 列表访问
+```R
+# 访问列表的第三个元素
+print(list_data[3])
 
+# 访问第一个向量元素
+print(list_data$Numbers)
+```
 
++ 操作列表元素
+```R
+# 添加元素
+list_data[4] <- "新元素"
+print(list_data[4])
 
+# 删除元素
+list_data[4] <- NULL
 
+# 更新元素
+list_data[3] <- "我替换来第三个元素"
+print(list_data[3])
+```
++ 合并列表
+```R
+# 用 c() 函数将多个列表合并为一个列表：
+# 创建两个列表
+list1 <- list(1,2,3)
+list2 <- list("Google","Runoob","Taobao")
 
-
-
-
+# 合并列表
+merged.list <- c(list1,list2)
+```
