@@ -192,12 +192,12 @@ R 语言为线性代数的研究提供了矩阵类型，这种数据结构很类
 R 语言的矩阵可以使用 matrix() 函数来创建，语法格式如下：
 ```R
 matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE,dimnames = NULL)
-参数说明：
-data 向量，矩阵的数据
-nrow 行数
-ncol 列数
-byrow 逻辑值，为 FALSE 按列排列，为 TRUE 按行排列
-dimname 设置行和列的名称
+# 参数说明：
+# data 向量，矩阵的数据
+# nrow 行数
+# ncol 列数
+# byrow 逻辑值，为 FALSE 按列排列，为 TRUE 按行排列
+# dimname 设置行和列的名称
 ```
 
 + 矩阵的生成
@@ -305,6 +305,136 @@ R 数组
 数组也是 R 语言的对象，R 语言可以创建一维或多维数组。R 语言数组是一个同一类型的集合，前面我们学的矩阵 matrix 其实就是一个二维数组。  
 向量、矩阵、数组关系可以看下图：
 ![](https://www.runoob.com/wp-content/uploads/2020/07/2039-08-06Done.png)
+
+R 语言数组创建使用 array() 函数，该函数使用向量作为输入参数，可以使用 dim 设置数组维度。  
+array() 函数语法格式如下：
+```R
+array(data = NA, dim = length(data), dimnames = NULL)
+# 参数说明：
+# data 向量，数组元素。
+# dim 数组的维度，默认是一维数组。
+# dimnames 维度的名称，必须是个列表，默认情况下是不设置名称的。
+```
+```R
+# 创建两个不同长度的向量
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+column.names <- c("COL1","COL2","COL3")
+row.names <- c("ROW1","ROW2","ROW3")
+matrix.names <- c("Matrix1","Matrix2")
+
+# 创建数组，并设置各个维度的名称
+result <- array(c(vector1,vector2),dim = c(3,3,2),dimnames = list(row.names,column.names,matrix.names))
+print(result)
+
+# 结果为
+, , Matrix1
+
+     COL1 COL2 COL3
+ROW1    5   10   13
+ROW2    9   11   14
+ROW3    3   12   15
+
+, , Matrix2
+
+     COL1 COL2 COL3
+ROW1    5   10   13
+ROW2    9   11   14
+ROW3    3   12   15
+```
+
+### 因子
+因子用于存储不同类别的数据类型，例如人的性别有男和女两个类别，年龄来分可以有未成年人和成年人。  
+R 语言创建因子使用 factor() 函数，向量作为输入参数。  
+factor() 函数语法格式：
+```R
+factor(x = character(), levels, labels = levels,
+       exclude = NA, ordered = is.ordered(x), nmax = NA)
+# 参数说明：
+# x：向量。
+# levels：指定各水平值, 不指定时由x的不同值来求得。
+# labels：水平的标签, 不指定时用各水平值的对应字符串。
+# exclude：排除的字符。
+# ordered：逻辑值，用于指定水平是否有序。
+# nmax：水平的上限数量。
+```
+
+```R
+x <- c("男", "女", "男", "男",  "女",levels=c('男','女'))
+sex <- factor(x)
+print(sex)
+print(is.factor(sex))
+
+# 结果为
+levels1 levels2 
+男      女      男      男      女      男      女 
+Levels: 男 女
+[1] TRUE
+```
+
++ 因子水平标签
+labels 参数为每个因子水平添加标签，labels 参数的字符顺序，要和 levels 参数的字符顺序保持一致，例如：
+```R
+sex=factor(c('f','m','f','f','m'),levels=c('f','m'),labels=c('female','male'),ordered=TRUE)
+print(sex)
+执行以上代码输出结果为：
+female male   female female male  
+Levels: female < male
+```
+
+### 数据框
+数据框（Data frame）可以理解成我们常说的"表格"。数据框是 R 语言的数据结构，是特殊的二维列表。数据框每一列都有一个唯一的列名，长度都是相等的，同一列的数据类型需要一致，不同列的数据类型可以不一样。
+![](https://static.runoob.com/images/mix/data-frame.svg)
+
+R 语言数据框使用 data.frame() 函数来创建，语法格式如下：
+```R
+data.frame(…, row.names = NULL, check.rows = FALSE,
+           check.names = TRUE, fix.empty.names = TRUE,
+           stringsAsFactors = default.stringsAsFactors())
+
+# …: 列向量，可以是任何类型（字符型、数值型、逻辑型），一般以 tag = value 的形式表示，也可以是 value。
+# row.names: 行名，默认为 NULL，可以设置为单个数字、字符串或字符串和数字的向量。
+# check.rows: 检测行的名称和长度是否一致。
+# check.names: 检测数据框的变量名是否合法。
+# fix.empty.names: 设置未命名的参数是否自动设置名字。
+# stringsAsFactors: 布尔值，字符是否转换为因子，factory-fresh 的默认值是 TRUE，可以通过设置选项（stringsAsFactors=FALSE）来修改。
+```
+
+```R
+table = data.frame(
+    姓名 = c("张三", "李四"),
+    工号 = c("001","002"),
+    月薪 = c(1000, 2000)   
+)
+
+print(table) # 查看 table 数据
+
+# 获取数据结构
+str(table)
+# 结果
+'data.frame':   2 obs. of  3 variables:
+ $ 姓名: chr  "张三" "李四"
+ $ 工号: chr  "001" "002"
+ $ 月薪: num  1000 2000
+ 
+# 提取指定的列
+result <- data.frame(table$姓名,table$月薪)
+
+# 提取前面两行
+result <- table[1:2,]
+
+```
+
++ 拓展数据框
+	+ 单纯添加一列
+```R
+# 添加部门列
+table$部门 <- c("运营","技术","编辑")
+```
+
+	+ cbind() 函数将多个向量合成一个数据框,左右合并
+	rbind() 函数多个向量合成一个数据框,上下合并
+
 
 
 
