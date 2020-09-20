@@ -24,26 +24,10 @@ sort --random-sort file | head -n 100
 sort -R file | head -5
 ```
 
-* 从fasta或fastq文件中随机抽取一定数量的reads
-    + [seqtk](https://github.com/xujunbi/linux-bioinformatics/blob/master/bioinformatics/bi_tools/seqtk.md)
++ 合并文件
 ```bash
-# 安装seqtk
-conda install seqtk
-
-# 命令
-$ seqtk sample
-Usage:   seqtk sample [-2] [-s seed=11] <in.fq> <frac>|<number>
-Options: -s INT       RNG seed [11]
-         -2           2-pass mode: twice as slow but with much reduced memory
-# []中的是可选参数，<> 中的是必需参数。
-# [-2] 内存较小的服务器上运行时，设置此参数。
-# [-s] 随机数的种子。如果是 Pair-end 数据，需要保证 read1 和 read2 的种子一致，才能抽到相同的raeds。默认是 11。
-# [in.fq] 输入文件
-# 可以输入要抽取的比例或 reads 条数。     
-seqtk sample -s100 read1.fq 10000 > sub1.fq
+cat file1.gz file2.gz file3.gz > allfiles.gz
 ```
-
-
 
 
 
