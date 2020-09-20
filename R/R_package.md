@@ -33,7 +33,10 @@ install.packages("要安装的包名")
 library("包名")
 ```
 
-
+## 更新R
+install.packages("installr")
+require(installr)
+updateR()
 
 
 
