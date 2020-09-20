@@ -36,7 +36,7 @@ retval <- subset(data, likes > 1 & name=="Runoob")
 ```
 
 ## 保存为 CSV 文件
-```
+```R
 # 写入新的文件
 write.csv(retval,"runoob.csv",sep = ";")
 ```
