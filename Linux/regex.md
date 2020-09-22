@@ -22,14 +22,14 @@
 \w   | 单词字符， [A-Za-z0-9_]   | a\wc   |  abc
 \W   | 非单词字符， [^\w]   |  a\Wc   | a c
 ?  | 匹配前一个字符零次或一次 | abc?  | ab,abc
-*  | 匹配前一个字符零次或多次 | abc*  | ab,abccc
-+  | 匹配前一个字符一次或多次 | abc+  | abc,abccc
+\*  | 匹配前一个字符零次或多次 | abc*  | ab,abccc
+\+  | 匹配前一个字符一次或多次 | abc+  | abc,abccc
 {m}  | 匹配前一个字符m 次 | ab{2}c  | abbc
 {m,n}  | 匹配前一个字符m 至n 次 | ab{1,2}c  | abc,abbc
 ^  | 匹配字符串开头 | ^abc  | [开头]abc
 $  | 匹配字符串末尾 | abc$  | abc[末尾]
 ()  | 分组，创建用于匹配的子串 | ab(cd)?  | ab,abcd
-|  | 或，两边的项目二选一 | ab(cd|ef)  | abcd,abef
+\|  | 或，两边的项目二选一 | ab(cd|ef)  | abcd,abef
 
 
 而所谓正则表达式其实就是元字符与普通字符的组合。
