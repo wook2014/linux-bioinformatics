@@ -12,12 +12,27 @@
 .  | 匹配除换行符（\n）外的任意一个字符 | a.c  | abc
 []  | 匹配字符集中的任意 | 一个字符 | a[bcd]e  | abe,ace,ade
 [a-z]  | 匹配任意一个小写字母 | a[a-z]e  | aae,abe,…,aye,aze
-[0-9]  | 匹配任意一个数字a[0-9]e a0e,a1e,…,a8e,a9e
+[0-9]  | 匹配任意一个数字 | a[0-9]e  | a0e,a1e,…,a8e,a9e
 [^]  | 不匹配字符集中的任意一个字符 | a[^bcd]e  | 除abe,ace,ade 外
 \  | 转义字符（删除紧跟其后的字符的特殊意义） | a\\.c  | a.c
+\d   | 数字，  [0-9]  |  a\dc  |   -a1c
+\D   | 非数字  [^\d]   | a\Dc   |  -abc
+\s   | 空白字符  [ \t\r\n\f\v]   | a\sc   |  a c
+\S   | 非空白字符  [^\s]   |  a\Sc   | abc
+\w   | 单词字符， [A-Za-z0-9_]   | a\wc   |  abc
+\W   | 非单词字符， [^\w]   |  a\Wc   | a c
+?  | 匹配前一个字符零次或一次 | abc?  | ab,abc
+*  | 匹配前一个字符零次或多次 | abc*  | ab,abccc
++  | 匹配前一个字符一次或多次 | abc+  | abc,abccc
+{m}  | 匹配前一个字符m 次 | ab{2}c  | abbc
+{m,n}  | 匹配前一个字符m 至n 次 | ab{1,2}c  | abc,abbc
+^  | 匹配字符串开头 | ^abc  | [开头]abc
+$  | 匹配字符串末尾 | abc$  | abc[末尾]
+()  | 分组，创建用于匹配的子串 | ab(cd)?  | ab,abcd
+|  | 或，两边的项目二选一 | ab(cd|ef)  | abcd,abef
 
 
-
+而所谓正则表达式其实就是元字符与普通字符的组合。
 
 
 
