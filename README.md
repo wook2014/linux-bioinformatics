@@ -3,8 +3,6 @@
 ## Linux
 Linux学习记录
 
-## software
-Linux中能安装的好用的软件
 
 ## bioinformatics
 生信相关
