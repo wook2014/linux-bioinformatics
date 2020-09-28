@@ -3,6 +3,8 @@
 ## Linux
 Linux学习记录
 
+## Literature_Reading
+文献阅读记录
 
 ## bioinformatics
 生信相关
@@ -22,7 +24,7 @@ Perl学习
 ## R
 R学习
 
-## latex template
+## latex_template
 我的latex模板
 
 ## 字体
