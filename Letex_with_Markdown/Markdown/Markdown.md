@@ -36,7 +36,9 @@
 ### 设置文字居中
 
 <center>居中</center>
+
 <p align="left">左对齐</p>
+
 <p align="right">右对齐</p>
 
 
