@@ -1,10 +1,10 @@
 # 相识HTML
 
 ## <!DOCTYPE> 标签
-<!DOCTYPE> 声明必须是 HTML 文档的第一行，位于 <html> 标签之前。
-
+<!DOCTYPE> 声明必须是 HTML 文档的第一行，位于 <html> 标签之前。  
 <!DOCTYPE> 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。
-
+声明采用HTML 5的语句是<!DOCTYPE html>，这个语句不属于HTML语言，只告诉浏览器HTML文档使用的HTML版本，并且这个语句不区分大小写。  
+  
 ```html
 <!DOCTYPE html>
 ```
