@@ -13,11 +13,11 @@
 
 标签 | 意义
 :--: | :--:
-<title></title> | 定义网页标题
-<style></style> | 定义内部样式表
-<script></script> | 定义JS代码或引入外部JS文件
-<link/> | 引入外部样式表文件
-<meta/> | 定义网页原信息
+\<title></title> | 定义网页标题
+\<style></style> | 定义内部样式表
+\<script></script> | 定义JS代码或引入外部JS文件
+\<link/> | 引入外部样式表文件
+\<meta/> | 定义网页原信息
   
 ### <meta/>标签
 Meta标签介绍：
