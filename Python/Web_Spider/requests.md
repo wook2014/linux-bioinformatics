@@ -5,9 +5,9 @@
 + urllib库是python内置的，无需我们额外安装，只要安装了Python就可以使用这个库。
 + requests库是第三方库，需要我们自己安装。
 
-基本操作函数
+基本操作函数  
 ![](https://atts.w3cschool.cn/attachments/image/20180517/1526540611518773.jpg)
-
+常用的也就是get
 
 比如
 ```python
