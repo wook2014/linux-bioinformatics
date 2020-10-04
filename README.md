@@ -24,8 +24,8 @@ Perl学习
 ## R
 R学习
 
-## latex_template
-我的latex模板
+## Letex_with_Markdown
+LaTeX与Markdown学习
 
 ## 字体
 一些Windows字体
