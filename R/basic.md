@@ -74,16 +74,12 @@ print(getwd())
 setwd("/Users/runoob/runoob-test2")
 ```
 
-## 数学函数
-数学函数 |	说明
-:--: | :--:
-sqrt(n)	 |	n的平方根
-exp(n)	 |	自然常数e的n次方，
-log(m,n) |	n的对数函数，返回n的几次方等于m
-log10(m) |	相当于log(m,10)
-round(n, m) |	对 n 保留 m 位小数四舍五入
-ceiling	(n) |	对 n 向上取整
-floor(n) |	对 n 向下取整
+## 常用数学函数
+![](https://bookdown.org/xiao/RAnalysisBook/mathfunc1.png)
+![](https://bookdown.org/xiao/RAnalysisBook/mathfunc2.png)
+
+## 常用统计函数
+![](https://bookdown.org/xiao/RAnalysisBook/stasfunc.png)
 
 
 ## 数据类型
@@ -103,6 +99,23 @@ R 里的数据类型有数值型（numeric），复数型（complex），字符�
 ```R
 class(x)
 ```
+
+常见数据类型
+数据类型	|英文名称	|例子
+:--:|:--:|:--:
+整数	|integer	|1L -3L
+浮点数	|double	|3.14 -5.1e-3
+复数	|complex	|1+1i 2.4-5.6i
+字符串	|character	|"Hello World!" 'a'
+逻辑值	|logical	|TRUE FALSE
+
+下面介绍几个相关的概念：
+
++ 模式（mode）：数据的模式与类型（type）非常像，典型的差异仅仅为，将整数型"integer"和浮点型"double"统称为数值型"numeric"。用mode函数可以识别变量的模式。
+
++ 类（class）：任意一个R对象（object）都可以被赋予一个类的属性（attribute），如果在被幅值时没有被指定，则有一个默认的类，包括矩阵"matrix"、数组"array"、 函数"function"或mode返回的结果。用class函数可以识别变量的类。
+
++ 结构（structure）：数据的结构是单个数据元素组合在一起的形式，常见的数据结构包括向量（vector）、列表（list）、矩阵（matrix）、数据框（data.frame）、数组（array）、时间格式（POSIXlt与POSIXlt）等，用函数str可查看数据的结构。我们将在下一章介绍对不同数据结构的操纵。
 
 ## Rstudio 中常用快捷键
 + 脚本编辑窗口：
