@@ -104,7 +104,34 @@ R 里的数据类型有数值型（numeric），复数型（complex），字符�
 class(x)
 ```
 
-
+## Rstudio 中常用快捷键
++ 脚本编辑窗口：
+	+ 新建脚本：Ctrl+Shift+N
+	+ 代码提示与补全：Tab
+	+ 注释或取消注释：Ctrl+Shift+C
+	+ 运行所选代码：Ctrl+Enter
+	+ 运行全部代码：Ctrl+Shift+Enter
+	+ 全选：Ctrl+A
+	+ 选择：Shift+箭头
+	+ 删除行：Ctrl+D
+	+ 撤销：Ctrl+Z
+	+ 重做：Ctrl+Shift+Z
+	+ 赋值符：Alt+-
+	+ 代码折叠：Alt+L
+	+ 代码展开：Shift+Alt+L
+	+ 保存本脚本：Ctrl+S
+	+ 保存全部脚本：Ctrl+Alt+S
+	+ 增加缩进：选中代码后，Tab（可包括多行）
+	+ 减小缩进：选中代码后，Shift+Tab
+	+ 智能缩进：选中代码后，Ctrl+I
+	+ 智能缩进加智能空格：Ctrl+Shift+A（更高级的代码格式规范化工具，可参考formatR包）
+	+ 选择与替换：Ctrl+F
+	+ 提取函数：Ctrl+Alt+X（RStudio 可以分析某一代码段，并自动将其转换成一个可重复使用的函数。任何在选择的代码内的“自由的”变量，即那些被引用但没有被创建的变量，将被转化为函数的参数）
++ 命令窗口中：
+	+ 历史中的上一条命令：向上箭头
+	+ 历史中的下一条命令：向下箭头
+	+ 中断运行的代码：Esc
+	+ 清除命令窗口中的内容：Ctrl+L
 
 
 
