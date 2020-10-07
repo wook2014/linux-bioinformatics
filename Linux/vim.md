@@ -8,6 +8,56 @@
 # 反注释
 :1,10s/^#//g
 ```
+## 基本配置
+"显示行号
+set number
+
+"语法高亮
+syntax on
+
+"在底部显示，当前处于命令模式还是插入模式
+set showmode
+
+"支持使用鼠标
+set mouse=a
+
+"使用 utf-8 编码
+set encoding=utf-8  
+
+"按下回车键后，下一行的缩进会自动跟上一行的缩进保持一致
+set autoindent
+
+"在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数
+set shiftwidth=4
+
+"光标所在的当前行高亮
+set cursorline
+
+"设置行宽，即一行显示多少个字符
+set textwidth=80
+
+"在状态栏显示光标的当前位置（位于哪一行哪一列）
+set  ruler
+
+"光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号
+set showmatch
+
+"搜索时，高亮显示匹配结果
+set hlsearch
+
+"输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果
+set incsearch
+
+"不创建备份文件。默认情况下，文件保存时，会额外创建一个备份文件，它的文件名是在原文件名的末尾，再添加一个波浪号（〜）
+set nobackup
+
+"不创建交换文件。交换文件主要用于系统崩溃时恢复文件，文件名的开头是.、结尾是.swp
+set noswapfile
+
+"出错时，发出视觉提示，通常是屏幕闪烁
+set visualbell
+
+
 ## 安装插件
 ### 一般操作步骤
 ```bash
@@ -56,7 +106,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'scrooloose/nerdtree'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
