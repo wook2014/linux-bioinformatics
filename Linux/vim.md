@@ -9,54 +9,75 @@
 :1,10s/^#//g
 ```
 ## 基本配置
+### 基础配置
 ```vim
-"显示行号
-set number
+set nocompatible                " nocompatible 用于关闭 compatible，表示不与 Vi 兼容
+set autoread                    " autoread 表示如果当前文件在 Vim 外被修改且未在 Vim 里面重新载入的话，则自动重新读取
+set shortmess=atI               " shortmess 选项用于设置Vim缩短消息长度的标志位列表，例如，shortmess=m 表示用 “[+]” 代替 “[Modified]”
+                    
+set magic                       " magic 选项用于改变搜索模式使用的特殊字符
+set title                       " title 用于设置 Vim 窗口标题
+set nobackup                    " nobackup 用于关闭 backup，设置覆盖文件时不保留备份文件
+set noswapfile                  "不创建交换文件。交换文件主要用于系统崩溃时恢复文件，文件名的开头是.、结尾是.swp
 
-"语法高亮
-syntax on
+set noerrorbells                " 用于关闭 errorbells 选项，表示 Vim 有错误信息时不响铃
+set visualbell t_vb=            " 表示使用可视响铃代替鸣叫，而显示可视响铃的终端代码由 t_vb 选项给出
+set t_vb=           
+set timeoutlen=500              " 表示以毫秒计的等待键码或映射的键序列完成的时间
+```
 
-"在底部显示，当前处于命令模式还是插入模式
-set showmode
+### 编码设置
+```vim
+set encoding=utf-8              "  设置 Vim 内部使用的字符编码，它应用于缓冲区、寄存器、表达式所用的字符  
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1              " 设置一个字符编码的列表，表示 Vim 自动检测文件编码时的备选字符编码列表
+set fileformats=unix,dos,mac    " 用于设置参与自动检测换行符 () 格式类型的备选列表
+set termencoding=utf-8          " 用于设置终端使用的编码方式 
+set formatoptions+=m            " 表示自动排版完成的方式,m 表示在任何值高于 255 的多字节字符上分行
+set formatoptions+=B            " 表示自动排版完成的方式,B 表示在连接行时，不要在两个多字节字符之间插入空格
+```
+
+### 界面显示设置
+```vim
+set ruler                       " 在状态栏显示光标的当前位置（位于哪一行哪一列）
+set number                      " 显示行号
+set nowrap                      " 设置超过窗口宽度的行不自动回绕显示
+set showcmd                     " 用于设置在屏幕最后一行显示 (部分的) 命令                                                                                         
+set showmode                    " 在插入、替换和可视模式里，在最后一行提供消息
+set showmatch                   " 光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号
+set matchtime=2                 " 匹配括号的时间
+```
+### 查找配置
+```vim
+set hlsearch                    " 设置将搜索结果高亮显示
+set incsearch                   " 让 Vim 根据已经在查找域中输入的文本，预览第一处匹配目标；每当新输入一个字符时，Vim 会即时更新预览内容
+set ignorecase                  " 忽略大小写
+set smartcase                   " 当 ignorecase 和 smartcase 选项均打开时，如果搜索模式中包含大写字母，Vim就会认为当前的查找(搜索)是区分大小写的。如果搜索模式中不包含任何大写字母，Vim 则会认为搜索应该不区分大小写。这是个比较 ”智能的” 推测你搜索意图的机制
+```
+
+### 缩进配置
+```vim
+set autoindent smartindent shiftround   " autoindent 用于设置新增加的行和前一行具有相同的缩进形式。smartindent 选项用于设置新增行时进行”智能”缩进，主要用于 C 语言一族，与 cindent 选项类似。在Vim smartindent 缩进模式下，每一行都有相同的缩进量，直到遇到右大括号 (}) 取消缩进形式 
+set shiftwidth=4                        " 选项用于设置执行Vim普通模式下的缩进操作 ( << 和 >> 命令 )时缩进的列数。而 shiftround 选项则表示缩进列数会自动取整到 ‘shiftwidth’ 选项值的倍数
+set tabstop=4                           " 缩进的空格个数
+set softtabstop=4                       " insert mode tab and backspace use 4 spaces "
+```
+### 显示当前光标位置
+```vim
+set cursorcolumn  " cursorcolumn 设置高亮显示光标当前所在列
+set cursorline    " cursorline 设置高亮显示光标所在屏幕行
+```
+
+### 其他设置
+
+```vim
+
+syntax on "语法高亮
 
 "支持使用鼠标
 set mouse=a
 
-"使用 utf-8 编码
-set encoding=utf-8  
-
-"按下回车键后，下一行的缩进会自动跟上一行的缩进保持一致
-set autoindent
-
-"在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数
-set shiftwidth=4
-
-"光标所在的当前行高亮
-set cursorline
-
 "设置行宽，即一行显示多少个字符
 set textwidth=80
-
-"在状态栏显示光标的当前位置（位于哪一行哪一列）
-set  ruler
-
-"光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号
-set showmatch
-
-"搜索时，高亮显示匹配结果
-set hlsearch
-
-"输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果
-set incsearch
-
-"不创建备份文件。默认情况下，文件保存时，会额外创建一个备份文件，它的文件名是在原文件名的末尾，再添加一个波浪号（〜）
-set nobackup
-
-"不创建交换文件。交换文件主要用于系统崩溃时恢复文件，文件名的开头是.、结尾是.swp
-set noswapfile
-
-"出错时，发出视觉提示，通常是屏幕闪烁
-set visualbell
 ```
 
 ## 安装插件
@@ -140,6 +161,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this lin
 
+"在 vim 启动的时候默认开启 NERDTree：
+autocmd VimEnter * NERDTree "或使用autocmd的缩写形式 au VimEnter * NERDTree
+
+"将NERDTree的窗口设置在vim窗口的右侧(默认为左侧)
+let NERDTreeWinPos="right"
 ```
 
 
