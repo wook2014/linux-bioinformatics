@@ -205,7 +205,13 @@ Vi/Vim手工自行安装配色方案的主要步骤包括：
 ```bash
 git clone https://github.com/morhetz/gruvbox
 ```
-
+```
+"最后更改
+syntax enable
+set t_Co=256
+colorscheme gruvbox
+set background=dark "背景色
+```
 
 ## .vimrc
 ```vim
