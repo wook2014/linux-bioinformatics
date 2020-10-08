@@ -117,7 +117,6 @@ git clone https://github.com/morhetz/gruvbox
 
 ## .vimrc
 ```vim
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
