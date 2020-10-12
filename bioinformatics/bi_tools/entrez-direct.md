@@ -11,8 +11,7 @@ esearch -db "protein" -query "txid10239[Organism]" | efetch -format fasta > outp
 ```
 
 ```bash
-# Download sequences infasta format from NCBI using edirect using isolate info
-
+# Download sequences in fasta format from NCBI using edirect using isolate info
 esearch -db nucleotide -query "GDST008"|efetch -format fasta > output.fasta
 ```
 
