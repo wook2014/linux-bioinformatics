@@ -83,10 +83,25 @@ qplot(x=carat, y=price, data=datax, color=cut, geom="line", main="geom=\"line\""
 qplot(x=carat, y=price, data=datax, color=cut, geom=c("line", "point"), main="geom=c(\"line\", \"point\")")
 ```
 
+### 4 qplot做统计图
+qplot是名副其实的qplot（quick plot）函数，通过改变几何类型geom参数的值你可以获得各种图形。geom参数可以设置的值和意义是：
 
++ point：散点图
++ line：曲线图
++ smooth：平滑曲线
++ jitter：另一种散点图
++ boxplot：箱线图
++ histogram：直方图
++ density：密度分布图
++ bar：柱状图
 
-
-
+前两种我们看过了，bar类型下面另讲，jitter以后有机会再说，看看其他4种类型：
+```R
+qplot(carat, price, data = diamonds, color=cut, geom = "smooth", main = "smooth")
+qplot(cut, price, data = diamonds, fill=cut, geom = "boxplot", main = "boxplot")
+qplot(price, data = diamonds, fill=cut, geom = "histogram", main = "histogram")
+qplot(price, data = diamonds, color=cut, geom = "density", main = "density")
+```
 
 
 
