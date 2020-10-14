@@ -51,8 +51,20 @@ Cutadapt软件可以剪切多种类型的adapter，如下表所示：
 ![](http://cache1.bioon.com.cn/ewebeditor/fckup/2017/3/20170330175945958386.png)
 
 
+## 基本操作
+```bash
+# 移除3'末端的接头
+cutadapt -a AACCGGTT -o output.fastq input.fastq
 
+# 同样支持压缩格式
+cutadapt -a AACCGGTT -o output.fastq.gz input.fastq.gz
 
+# 如果不指定-o 则需要用标准输入输出
+cutadapt -a AACCGGTT input.fastq > output.fastq
 
+```
+
+## 理解案例
+![](http://cache1.bioon.com.cn/ewebeditor/fckup/2017/3/20170330180015544141.png)
 
 
