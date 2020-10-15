@@ -111,7 +111,7 @@ echo "${CONTENT}"
 
 ```
 ### $(())与$()还有${}差在哪
-在bash shell中, $()与` `(反引号)都是用来做命令替换(command substitution)的。
+在bash shell中, $()与\` \`(反引号)都是用来做命令替换(command substitution)的。
 ${}吧...它其实就是用来做 变量替换用的啦。 一般情况下，$var与${var}并没有啥不一样。 但是用${}会比较精准的界定变量名称的范围，
 ${}用于匹配和字符的提取
 假设我们定义了一个变量file为：
@@ -149,13 +149,22 @@ ${file%%.*}  # 拿掉第一个.及其右边的字符串，其结果为： /dir1/
 + 两个符号是最大匹配;
 
 
+#### shell字符串取子串
+```bash
+${file:0:5} #提取最左边的5个字符：/dir1
+${file:5:5} #提取第5个字符及其右边的5个字符:/dir2
+```
+shell 字符串取子串的格式：`${s:pos:length}`, 取字符串 s 的子串：从 pos 位置开始的字符(包括该字符)的长度为 length 的的子串； 其中pos为子串的首字符，在 s 中位置； length为子串的长度；
 
+#### shell 字符串变量值的替换
+shell 字符串变量值的替换格式：
 
-
-
-
-
-
+首次替换： ${s/src_pattern/dst_pattern} 将字符串s中的第一个src_pattern替换为dst_pattern。
+全部替换： ${s//src_pattern/dst_pattern} 将字符串s中的所有出现的src_pattern替换为dst_pattern.
+```bash
+${file/dir/path}  #将第一个dir替换为path：/path1/dir2/dir3/my.file.txt
+${file//dir/path} #将全部的dir替换为path：/path1/path2/path3/my.file.txt
+```
 
 
 
