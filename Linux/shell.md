@@ -57,5 +57,102 @@ guest="Katie"
 echo "$guest checked in $days days ago"
 ```
 
+#### 特殊变量
+变量 | 使用 | 功能
+:--:|:--:|:--
+?  | $?  | 上一个命令的退出状态
+$  | $$  | 当前shell 进程的PID
+!  | $!  | 后台运行的上一个命令的PID
+0  | $0  | 当前脚本的文件名
+\#  | $#  | 传递给脚本的参数个数
+1-9  | $1  | 传递给脚本的第1（2,3,…,9）个参数
+\*  | $*  | 传递给脚本的所有参数（作为一个单词）
+@ | $@  | 传递给脚本的所有参数的列表
+\_  | $_  | 上一个命令的最后一个参数
+
+
+
+### 从键盘读取输入
+用户可以通过read 命令读取键盘的输入值为变量赋值。
+```bash
+# read读取键盘输入，并赋值给变量PERSON
+echo "What is your name?"
+read PERSON
+echo "Hello, $PERSON"
+```
+
+
+## 高级概念
+### 命令替换
+Shell 脚本最有用处的特性之一，就是它可以提取某个命令的输出信息，并将其赋值给一个变量。  
+可以通过以下两种方式将命令输出赋值给变量：
+
++ 反单引号（`）
++ $() 格式
+
+```bash
+# 如果命令执行结果有多行内容，存入变量并打印时换行符会
+丢失：
+cat test.txt
+#a
+#b
+#c
+CONTENT=`cat test.txt`
+echo ${CONTENT}
+#a b c
+
+#若需要保留换行符，则在打印时必须加上""：
+CONTENT=`cat test.txt`
+echo "${CONTENT}"
+#a
+#b
+#c
+
+```
+
+### 输入输出重定向
+#### 1. 输出重定向
+最基本的重定向，就是通过大于号（>），将某个命令的输出内容保存至一个文件中。
+
+格式：command > outputfile
+```bash
+$ date > current_date.txt
+$ ls -l current_date.txt
+-rw-r--r--  1 starky  staff  29 Nov  1 01:29 current_date.txt
+$ cat current_date.txt
+Thu Nov  1 01:29:45 CST 2018
+PS：如使用重定向时，指定的文件已存在，则该文件的原始内容会被新内容覆盖。
+如果只是想在文件末尾追加内容，则可以使用双大于号（>>）
+
+$ date >> current_date.txt
+$ cat current_date.txt
+Thu Nov  1 01:29:45 CST 2018
+Thu Nov  1 01:34:03 CST 2018
+```
+
+#### 2. 输入重定向
+输入重定向和输出重定向相反。即从文件中读取内容，并将该内容传递给某个命令。
+
+格式：command < inputfile
+```bash
+$ ls -l /Users/starky
+total 49864
+drwx------@  3 starky  staff        96 Oct 13 18:00 Applications
+drwx------+ 23 starky  staff       736 Oct 31 19:14 Desktop
+drwx------+ 21 starky  staff       672 Oct 31 19:15 Documents
+
+$ cat directory.txt
+/Users/starky
+$ ls -l < directory.txt
+total 49864
+drwx------@  3 starky  staff        96 Oct 13 18:00 Applications
+drwx------+ 23 starky  staff       736 Oct 31 19:14 Desktop
+drwx------+ 21 starky  staff       672 Oct 31 19:15 Documents
+drwx------+ 37 starky  staff      1184 Oct 30 20:18 Downloads
+drwx------+ 72 starky  staff      2304 Oct 27 01:38 Library
+drwx------+  6 starky  staff       192 Oct 29 10:34 Movies
+drwx------+  3 starky  staff        96 Sep 27 13:13 Music
+```
+
 
 
