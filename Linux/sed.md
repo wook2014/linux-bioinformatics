@@ -183,3 +183,5 @@ sed -n ‘s/i/A/i’ message
 # 把message文件中每一行的第一个i或I字符替换为A字符，也即是忽略大小写。
 ```
 
+
++ [awk-sed](https://github.com/renchunxiao/awk-sed/wiki)
