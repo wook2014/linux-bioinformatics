@@ -1,10 +1,11 @@
-# Kraken2和krakentools基本操作
+# Kraken2、Bracken和krakentools基本操作
 
 ## 软件的安装
 ```
 # 首选当然是conda
 conda install -c bioconda kraken2
 conda install -c bioconda krakentools
+conda install -c bioconda bracken
 ```
 
 ## 具体使用
