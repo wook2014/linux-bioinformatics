@@ -1,7 +1,7 @@
 # Kraken2、Bracken和krakentools基本操作
 
 ## 软件的安装
-```
+```bash
 # 首选当然是conda
 conda install -c bioconda kraken2
 conda install -c bioconda krakentools
@@ -59,5 +59,17 @@ krakentools的具体操作详见作者的GitHub，如下：
 
 
 
-
+## bracken
+```bash
+   >>$ bracken -h
+/home/usr18/miniconda2/bin/bracken: illegal option -- h
+Usage: bracken -d MY_DB -i INPUT -o OUTPUT -w OUTREPORT -r READ_LEN -l LEVEL -t THRESHOLD
+  MY_DB          location of Kraken database
+  INPUT          Kraken REPORT file to use for abundance estimation
+  OUTPUT         file name for Bracken default output
+  OUTREPORT      New Kraken REPORT output file with Bracken read estimates
+  READ_LEN       read length to get all classifications for (default: 100)
+  LEVEL          level to estimate abundance at [options: D,P,C,O,F,G,S] (default: S)
+  THRESHOLD      number of reads required PRIOR to abundance estimation to perform reestimation (default: 0)
+```
 
