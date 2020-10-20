@@ -1,4 +1,4 @@
-# Kraken2、Bracken和krakentools基本操作
+# <center>Kraken2、Bracken和krakentools基本操作</center>
 
 ## 软件的安装
 ```bash
@@ -245,14 +245,21 @@ For example:
 6. `extract_kraken_reads.py [options] -t 1 --include-children` ==> All classified reads will be extracted
 
 
+##### 2. combine_kreports.py usage/options
+这个脚本就是把多个kraken report文件合并为一个
+这也真没啥好讲的。
 
 
-
-
-
-
-
-
+##### 3. kreport2krona.py usage/options
+这个脚本把kraken report文件转化为krona兼容的
+举栗子：
+```bash
+kraken2 --db KRAKEN2DB --threads THREADNUM --report MYSAMPLE.KREPORT \
+    --paired SAMPLE_1.FASTA SAMPLE_2.FASTA > MYSAMPLE.KRAKEN2
+python kreport2krona.py -r MYSAMPLE.KREPORT -o MYSAMPLE.krona 
+ktImportText MYSAMPLE.krona -o MYSAMPLE.krona.html
+```
+<font size="3" color="red">先到这，后面用到再补！</font>
 
 ### bracken
 ```bash
@@ -267,5 +274,15 @@ Usage: bracken -d MY_DB -i INPUT -o OUTPUT -w OUTREPORT -r READ_LEN -l LEVEL -t 
   LEVEL          level to estimate abundance at [options: D,P,C,O,F,G,S] (default: S)
   THRESHOLD      number of reads required PRIOR to abundance estimation to perform reestimation (default: 0)
 ```
+
+一个相当好的教程
++ [宏基因组单个样本数据处理流程笔记](https://www.codenong.com/cs107077993/)
+
+
+
+
+
+
+
 
 
