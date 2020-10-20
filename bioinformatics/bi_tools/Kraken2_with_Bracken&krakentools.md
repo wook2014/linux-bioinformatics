@@ -213,7 +213,7 @@ python *.py -h
 ##### 1. extract\_kraken\_reads.py usage/options 
 这个脚本是用来提取reads的
 
-这里不妨照官方文档给的指南，只讲怎么用
+这里不仿照官方文档给的指南，只讲怎么用
 
 
 对于双端测序的reads文件来说，不论是fastq还是fasta都是可以的，也可以是这些文件的压缩格式
@@ -222,21 +222,27 @@ extract_kraken_reads.py -k myfile.kraken -s1 read1.fq -s2 reads2.fq -o extracted
 ```
 
 在具体的提取阶段，有包含提取和不包含提取两大类
-+ 不包含提取（--exclude flag）
++ 不包含提取（--exclude flag）  
 默认是包含提取，但是不包含也是有用的嘛！
+
 For example:
 
-1. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude` ==> extract all reads NOT classified as Human (taxid 9606).
-2. `extract_kraken_reads.py -k myfile.kraken ... --taxid 2 --exclude --include-children` ==> extract all reads NOT classified as Bacteria (taxid 2) or any classification in the Bacteria subtree.
-3. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude --include-parents` ==> extract all reads NOT classified as Human or any classification in the direct ancestry of Human (e.g. will exclude reads classified at the Primate, Chordata, or Eukaryota levels).
+1. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude` ==> extract all reads NOT classified as Human (taxid 9606).（提取不包含mapping人类基因组的reads）
+2. `extract_kraken_reads.py -k myfile.kraken ... --taxid 2 --exclude --include-children` ==> extract all reads NOT classified as Bacteria (taxid 2) or any classification in the Bacteria subtree.（提取不包含细菌及其子类的其他所有reads）
+3. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude --include-parents` ==> extract all reads NOT classified as Human or any classification in the direct ancestry of Human (e.g. will exclude reads classified at the Primate, Chordata, or Eukaryota levels).（提取不包含人类及其以上所有分类的reads，如灵长类，脊索动物门，真核生物等）
 
 
++ 包含提取（--include-parents/--include-children flags）
 
+默认就是按照包含某物种的taxonomy ID来提取reads的
 
-
-
-
-
+举个栗子：
+1. `extract_kraken_reads.py [options] -t 562` ==> 850 reads classified as E. coli will be extracted
+2. `extract_kraken_reads.py [options] -t 562 --include-parents` ==> 900 reads classified as E. coli or Bacteria will be extracted
+3. `extract_kraken_reads.py [options] -t 562 --include-children` ==> 950 reads classified as E. coli, E. coli C, or E. coli ETEC will be extracted
+4. `extract_kraken_reads.py [options] -t 498388` ==> 50 reads classified as E. coli C will be extracted
+5. `extract_kraken_reads.py [options] -t 498388 --include-parents` ==> 950 reads classified as E. coli C, E. coli, or Bacteria will be extracted
+6. `extract_kraken_reads.py [options] -t 1 --include-children` ==> All classified reads will be extracted
 
 
 
