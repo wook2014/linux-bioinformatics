@@ -193,6 +193,58 @@ the next 1 k-mer was not in the database
 krakentools的具体操作详见作者的GitHub，如下：
 + [krakentools](https://github.com/jenniferlu717/KrakenTools)
 
+为了我这三秒记忆的人可以在日后看见还能尽快拿来用，想着还是翻译一下：
+#### Scripts included in KrakenTools 
+KrakenTools 实际上就是9个Python脚本，如下所示：
+1. [extract\_kraken\_reads.py](#extract\_kraken\_readspy)
+2. [combine\_kreports.py](#combine\_kreportspy)
+3. [kreport2krona.py](#kreport2kronapy)
+4. [kreport2mpa.py](#kreport2mpapy)
+5. [combine\_mpa.py](#combine\_mpapy)
+6. [filter\_bracken\_out.py](#filter\_bracken\_outy)
+7. [fix\_unmapped.py](#fix\_unmappedpy)
+8. [make\_ktaxonomy.py](#make\_ktaxonomypy)
+9. [make\_kreport.py](#make\_kreportpy)
+
+怎么用？
+```bash
+python *.py -h
+```
+##### 1. extract\_kraken\_reads.py usage/options 
+这个脚本是用来提取reads的
+
+这里不妨照官方文档给的指南，只讲怎么用
+
+
+对于双端测序的reads文件来说，不论是fastq还是fasta都是可以的，也可以是这些文件的压缩格式
+```bash
+extract_kraken_reads.py -k myfile.kraken -s1 read1.fq -s2 reads2.fq -o extracted1.fq -o2 extracted2.fq
+```
+
+在具体的提取阶段，有包含提取和不包含提取两大类
++ 不包含提取（--exclude flag）
+默认是包含提取，但是不包含也是有用的嘛！
+For example:
+
+1. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude` ==> extract all reads NOT classified as Human (taxid 9606).
+2. `extract_kraken_reads.py -k myfile.kraken ... --taxid 2 --exclude --include-children` ==> extract all reads NOT classified as Bacteria (taxid 2) or any classification in the Bacteria subtree.
+3. `extract_kraken_reads.py -k myfile.kraken ... --taxid 9606 --exclude --include-parents` ==> extract all reads NOT classified as Human or any classification in the direct ancestry of Human (e.g. will exclude reads classified at the Primate, Chordata, or Eukaryota levels).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
