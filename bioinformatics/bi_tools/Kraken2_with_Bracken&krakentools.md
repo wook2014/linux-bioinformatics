@@ -141,6 +141,54 @@ U       MH0055_GL0024944        0       624     0:590
 
 若在运行时添加`--use-names`参数，则输出文件的第3列，会用taxonomic name代替taxonomic id
 
+#### kraken2结果解释
+--output  
+
+共5列
+1."C"/"U"：是否分类（C:分类;U:未分类）
+
+2.测序数据read ID号 ，来自FASTA/FASTQ文件
+
+3.分类ID号，（例：Mucilaginibacter ginsenosidivorax (taxid 862126);如果taxid号为0,说明没有分类）
+
+4.测序read的长度
+
+5.以空格分隔的列表，指示序列中每个k-mer的LCA映射 （冒号之前taxid，0为没有数据）
+
+例："562:13 561:4 A:31 0:1 562:3" 
+
+
+the first 13 k-mers mapped to taxonomy ID #562
+
+the next 31 k-mers contained an ambiguous nucleotide
+
+the next 1 k-mer was not in the database
+
+备注：最近公共祖先 lowest common ancestor (LCA) 
+
+--report
+
+共6列
+
+1.Percentage of fragments covered by the clade rooted at this taxon（这个属或种的read在总read的比例）
+
+2.Number of fragments covered by the clade rooted at this taxon（统计分类子集数量即该分类单元的read数，）<比如属，会包括这个属之下的所有种>）
+
+3.Number of fragments assigned directly to this taxon （只鉴定到这个分类单元的read数<比如属，就是只包含确定到这个属，但不包括可以鉴定到这个属之下的种的read，这个是和第2列的区别> ）
+
+备注：与测序read个数相同
+
+4.A rank code, indicating (U)nclassified<未分类>, (R)oot, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus<属>, or (S)pecies<种>.
+
+门纲目科属种
+
+备注：分类等级码(例：G2，通过一个数字指示与该等级的距离，表示分类单元在属和种之间的等级码，the grandparent taxon is at the genus rank)
+
+5.NCBI taxonomic ID number （NCBI分类号）
+
+6.Indented scientific name（缩进的学名）
+
+
 ### krakentools
 krakentools的具体操作详见作者的GitHub，如下：
 + [krakentools](https://github.com/jenniferlu717/KrakenTools)
@@ -161,4 +209,5 @@ Usage: bracken -d MY_DB -i INPUT -o OUTPUT -w OUTREPORT -r READ_LEN -l LEVEL -t 
   LEVEL          level to estimate abundance at [options: D,P,C,O,F,G,S] (default: S)
   THRESHOLD      number of reads required PRIOR to abundance estimation to perform reestimation (default: 0)
 ```
+
 
