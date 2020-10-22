@@ -273,16 +273,39 @@ Usage: bracken -d MY_DB -i INPUT -o OUTPUT -w OUTREPORT -r READ_LEN -l LEVEL -t 
   READ_LEN       read length to get all classifications for (default: 100)
   LEVEL          level to estimate abundance at [options: D,P,C,O,F,G,S] (default: S)
   THRESHOLD      number of reads required PRIOR to abundance estimation to perform reestimation (default: 0)
+  
+# Bracken参数解释
+-d，Kraken2数据库路径（包含Braken对应长度索引）；
+-i，Kraken2的输出文件名（--report的输出文件名），在这里作为输入文件；
+-o，Bracken输出文件（校正详情）文件名；
+-w，Bracken计算后的新报告（每个物种的reads数目）文件名；
+-r， reads长度；
+-l，分类水平（D,P,C,O,F,G,S）；
+-t，线程数。
+
 ```
+
+#### Option 1: bracken:（使用Braken校正kraken2产生的report文件）
+```bash
+bracken -d ${KRAKEN_DB} -i ${SAMPLE}.kreport -o ${SAMPLE}.bracken -r ${READ_LEN} -l ${CLASSIFICATION_LEVEL} -t ${THRESHOLD}
+
+# 例如
+bracken -d ~/dbminikraken2_v1_8GB -i ./out/TEST.report -o ./out/TEST.S.bracken -w TEST.S.bracken.report -r 150 -l S
+```
+
+
+
+
+
 
 一个相当好的教程
 + [宏基因组单个样本数据处理流程笔记](https://www.codenong.com/cs107077993/)
 
++ [Kraken2+Bracken处理宏基因组数据](https://www.jianshu.com/p/dd8182e861cb)
 
++ [bracken官方手册](https://ccb.jhu.edu/software/bracken/index.shtml?t=manual)
 
++ [宏基因组分析（三）物种组成分析](https://www.jianshu.com/p/04065914220b)
 
-
-
-
-
++ [pavian](https://github.com/fbreitwieser/pavian)
 
