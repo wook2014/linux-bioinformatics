@@ -299,13 +299,17 @@ bracken -d ~/dbminikraken2_v1_8GB -i ./out/TEST.report -o ./out/TEST.S.bracken -
 
 
 一个相当好的教程
++ [kraken2](http://ccb.jhu.edu/software/kraken2/index.shtml)
+
++ [bracken](https://ccb.jhu.edu/software/bracken/index.shtml?t=manual)
+
++ [KrakenTools](https://github.com/jenniferlu717/KrakenTools)
+
++ [pavian](https://github.com/fbreitwieser/pavian)
+
 + [宏基因组单个样本数据处理流程笔记](https://www.codenong.com/cs107077993/)
 
 + [Kraken2+Bracken处理宏基因组数据](https://www.jianshu.com/p/dd8182e861cb)
 
-+ [bracken官方手册](https://ccb.jhu.edu/software/bracken/index.shtml?t=manual)
-
 + [宏基因组分析（三）物种组成分析](https://www.jianshu.com/p/04065914220b)
-
-+ [pavian](https://github.com/fbreitwieser/pavian)
 
