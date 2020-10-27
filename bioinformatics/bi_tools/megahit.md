@@ -30,4 +30,19 @@ Result: assembled contigs are in fasta file:
 megahit_result/final.contigs.fa
 
 
+## Calculate contig coverage and extract unassembled reads
 
+
+
+
+
+
+
+
+
+
++ [MEGAHIT](http://www.metagenomics.wiki/tools/assembly/megahit)
+
++ [An example of real assembly](https://github.com/voutcn/megahit/wiki/An-example-of-real-assembly)
+
++ [contigs output by MEGAHIT](https://github.com/voutcn/megahit/wiki/Visualizing-MEGAHIT's-contig-graph)
