@@ -46,3 +46,9 @@ megahit_result/final.contigs.fa
 + [An example of real assembly](https://github.com/voutcn/megahit/wiki/An-example-of-real-assembly)
 
 + [contigs output by MEGAHIT](https://github.com/voutcn/megahit/wiki/Visualizing-MEGAHIT's-contig-graph)
+
++ [组装与分箱](https://www.jianshu.com/p/4cbbe3458366)
+
+
+
+
