@@ -313,3 +313,6 @@ bracken -d ~/dbminikraken2_v1_8GB -i ./out/TEST.report -o ./out/TEST.S.bracken -
 
 + [宏基因组分析（三）物种组成分析](https://www.jianshu.com/p/04065914220b)
 
++ [Kraken的原理浅析](https://www.jianshu.com/p/eccbc2c616eb)
+
++ [Kraken：使用精确比对的超快速宏基因组序列分类软件](https://blog.csdn.net/woodcorpse/article/details/100542360)
