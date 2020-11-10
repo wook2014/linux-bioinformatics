@@ -78,9 +78,9 @@ head -100 SWTA0402A.bam.stat # 其实也没有100行\笑哭
 ```
 ---
 
-## counts
+## counts定量
 ```bash
-featureCounts -T 20 -p -t GTF第三列 -g GTF第9列 -a GTF文件 ${i}.sorted.bam -o ${i}.counts
+featureCounts -T 20 -p -t exon -g gene_id -a *.gtf ${i}.sorted.bam -o ${i}.counts
 # 命令待改
 ```
 
