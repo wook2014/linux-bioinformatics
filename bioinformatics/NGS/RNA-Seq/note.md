@@ -14,8 +14,9 @@
 
 [reads计数原理及featureCounts统计counts后的cpm和tpm计算](https://www.jianshu.com/p/6b6bb306b76e)
 
-[]()
-[]()
+[使用limma、Glimma和edgeR，RNA-seq数据分析易如反掌](https://www.bioconductor.org/packages/devel/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow_CHN.html#%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE)
+
+[使用 R 语言 edgeR 包对RNA-seq测序结果下游分析](https://yangfangs.github.io/2016/04/10/RNAseq-edgeR-DEgenes-analysis/#%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BE%E5%9F%BA%E5%9B%A0)
 
 []()
 
