@@ -42,12 +42,12 @@
 
 [DAVID 进行 GO/KEGG 功能富集分析](https://www.cnblogs.com/0820LL/p/11656330.html)
 
-[]()
+[Remove rRNA Sequences with SortMeRNA](https://vidotto.top/post/remove-rrna-sequences-with-sortmerna/)
 
 
-[]()
+[宏转录组分析：kneaddata质控、SortMeRNA去rRNA](https://www.jianshu.com/p/aefde85973a2)
 
-[]()
+[RNA-seq质控](https://anjingwd.github.io/AnJingwd.github.io/2018/01/10/RNA-seq%E8%B4%A8%E6%8E%A7/)
 
 []()
 
