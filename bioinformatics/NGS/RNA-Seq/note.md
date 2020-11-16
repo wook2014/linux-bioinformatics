@@ -49,7 +49,7 @@
 
 [RNA-seq质控](https://anjingwd.github.io/AnJingwd.github.io/2018/01/10/RNA-seq%E8%B4%A8%E6%8E%A7/)
 
-[]()
+[RNA-seq workflow - gene-level exploratory analysis and differential expression](https://www.bioconductor.org/help/course-materials/2016/CSAMA/lab-3-rnaseq/rnaseq_gene_CSAMA2016.html#exploratory-analysis-and-visualization)
 
 []()
 
