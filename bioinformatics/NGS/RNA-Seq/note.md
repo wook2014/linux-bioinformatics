@@ -51,10 +51,10 @@
 
 [RNA-seq workflow - gene-level exploratory analysis and differential expression](https://www.bioconductor.org/help/course-materials/2016/CSAMA/lab-3-rnaseq/rnaseq_gene_CSAMA2016.html#exploratory-analysis-and-visualization)
 
-[]()
+[samtools从sam/bam文件提取序列生成fastq/fasta文件以及flag对应的意义](https://www.jianshu.com/p/c97df2e16642)
 
 
-[]()
+[SAM/BAM相关的进阶知识](https://ming-lian.github.io/2019/02/07/Advanced-knowledge-of-SAM/)
 
 []()
 
