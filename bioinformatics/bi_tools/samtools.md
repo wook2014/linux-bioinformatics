@@ -252,3 +252,15 @@ omitted by default; see the -a option.
 ```
 samtools depth tmp.index.bam  >  tmp.depth.bam
 ```
+
+[[SAMtools] 常用指令总结](https://www.cnblogs.com/xiaofeiIDO/p/6805373.html)
+
+[samtools常用命令详解](https://www.cnblogs.com/emanlee/p/4316581.html)
+
+[SAM/BAM相关的进阶知识](https://ming-lian.github.io/2019/02/07/Advanced-knowledge-of-SAM/)
+
+
+
+
+
+
