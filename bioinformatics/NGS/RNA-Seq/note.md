@@ -56,7 +56,7 @@
 
 [SAM/BAM相关的进阶知识](https://ming-lian.github.io/2019/02/07/Advanced-knowledge-of-SAM/)
 
-[]()
+[RNA-seq中的那些统计学问题](https://ming-lian.github.io/2019/02/08/Stat-on-RNAseq/)
 
 
 []()
