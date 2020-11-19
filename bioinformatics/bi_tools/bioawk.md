@@ -23,6 +23,8 @@ fastx:
 
 简单看看它支持的option：
 ```
+usage: bioawk [-F fs] [-v var=value] [-c fmt] [-tH] [-f progfile | 'prog'] [file ...]
+-F： 输入记录列和列之间的分隔符，和awk相同
 -t将输入输出的分隔符设置为tab
 -c 设置输入文件或想解析的文件的格式
 -v 设置自定义的变量
@@ -54,6 +56,11 @@ bioawk -c fastx '{ print ">"$name"|SUFFIX"; $seq }' input.fasta
 # for large scale use cdbyank instead
 bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' input.fasta
 
+# 轉換fasta成tabular的格式
+bioawk -t -c fastx '{ print $name, $seq }' input.fasta
+
+# 選取特定id的序列
+bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print ">"$name"\n"$seq}' input.fasta
 ```
 
 ### 处理fastq文件
