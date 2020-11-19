@@ -59,18 +59,17 @@ bioawk -cfastx 'BEGIN{while((getline k <"IDs.txt")>0)i[k]=1}{if(i[$name])print "
 ### 处理fastq文件
 处理fastq文件是 bioawk输入依然是-c fastx，它会自动识别你是fastq还是fasta格式，然后找出其对应的$name $seq $qual $comment变量，很好很强大，有没有。
 ```bash
-计算fastq序列的行数：
-
+# 计算fastq序列的行数：
 bioawk -t -c fastx 'END {print NR}' input.fastq
 #当bioawk探测出来你这是fastq文件后，它会将总行数算出来然后除去4，找到相应的序列行数。
-将fastq格式转为fasta格式：
 
+# 将fastq格式转为fasta格式：
 bioawk -c fastx '{print ">"$name; print $seq}' input.fastq
-计算fastq中碱基的平均质量分数：
 
+#计算fastq中碱基的平均质量分数：
 bioawk -c fastx '{print ">"$name; print meanqual($qual)}' input.fastq
-过滤掉短于10bp的reads（快速简单过滤fastq文件的好办法）：
 
+# 过滤掉短于10bp的reads（快速简单过滤fastq文件的好办法）：
 bioawk -cfastx 'length($seq) > 10 {print "@"$name"\n"$seq"\n+\n"$qual}' input.fastq
 ```
 
@@ -97,3 +96,7 @@ bioawk -c sam '{ s=$seq; if(and($flag, 16)) {s=revcomp($seq) } print ">"$qname"\
 # 输出你想要那组samples（这里是foo和bar）所对应的基因型：
 grep -v "^##" in.vcf | bioawk -tc hdr '{print $foo,$bar}'
 ```
+
+
+
+[生信小工具：awk的升级版bioawk](https://www.jianshu.com/p/e4765b44783a)
