@@ -13,44 +13,56 @@ NCBI（National Center for Biotechnology Information，美国国家生物技术�
 ##### Databases
 
 + Assembly
+
 一个提供有关基因组组装结构，装配名称和其他元数据，统计报告以及基因组序列数据链接等信息的数据库。
 
 + GenBank
+
 NIH基因序列数据库，是所有公开可用DNA序列的注释集合。NCBI的GenBank数据库和日本DNA数据库（DDBJ），欧洲分子生物学实验室（EMBL）每天交换数据，保证数据实时跟新。 GenBank由几个部分组成，大部分序列可以通过Nucleotide数据库访问。 例外的是EST和GSS分区，分别通过Nucleotide EST和Nucleotide GSS数据库访问
 
 + Gene
+
 一个可搜索的基因数据库，专注于已经完全测序的基因组，并且有一个活跃的研究团体来提供基因特异性数据。基因信息包括命名法、染色体定位、基因产物及其属性（例如，蛋白质相互作用）、相关标记、表型、相互作用、引文链接、序列、突变详情、图谱、表达报告、同源物、蛋白结构域内容和外部数据库链接。
 
 + Genome
+
 包含来自1000多种生物的全基因组的序列和比对数据。 基因组代表完全测序的生物和正在进行测序的生物， 三个主要领域（细菌，古细菌和真核生物），以及许多病毒，噬菌体，类病毒，质粒和细胞器。
 
 + PubMed
+
 MEDLINE和其他生命科学期刊的生物医学文献引文和摘要数据库。
 
 + PubMed Central (PMC)
+
 全文生物医学和生命科学期刊文献，包括临床医学和公共卫生。
 
 + Reference Sequence (RefSeq)
+
 由NCBI产生的主持的，非冗余的基因组DNA，转录物（RNA）和蛋白质序列的集合。
 
 + Taxonomy
+
 包含NCBI数据库中具有分子数据的160,000多种生物的名称和系统发育谱系。
 
 ##### Tools
 + BLAST
+
 BLAST（Basic Local Alignment Search Tool），即基于局部序列比对算法的搜索工具，是由NCBI开发和管理的一套生物大分子一级结构序列比对程序。可将输入的核酸或蛋白质序列与数据库中的已知序列进行比对，获得序列相似度等信息，从而判断序列的来源或进化关系。
 
 + Batch Entrez
+
 允许你提交Nucleotide、Protein或其他Entrez数据库中的GI、登录号或其他唯一标识符的文件，从许多Entrez数据库中检索记录。
 
 + E-Utilities
+
 在常规Web查询界面之外提供对NCBI Entrez系统内数据访问的工具。
 命令行工具：direct-Entrez
 
 + Tree Viewer
+
 用于创建和显示系统发育树数据的工具。 Tree Viewer可以分析您自己的序列数据，将可打印的矢量图像生成为PDF，并且可以嵌入到网页中。
 
-#### EMBL
+#### EMBL-BEI
 
 
 
