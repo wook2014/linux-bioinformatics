@@ -81,7 +81,7 @@ Swiss-Prot条目的注释中使用了一系列序列分析工具。包括手动�
 
 
 ## 二、NCBI Blast在线工具的使用及结果说明
-![](https://github.com/xujunbi/linux-bioinformatics/blob/master/bioinformatics/Ex_liu/ex1/img/blast.jpg)
+![blast](https://github.com/xujunbi/linux-bioinformatics/blob/master/bioinformatics/Ex_liu/ex1/img/blast.jpg)
 
 ### blastn
 
