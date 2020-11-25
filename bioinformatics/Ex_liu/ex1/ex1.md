@@ -1,6 +1,6 @@
 # <center>第一次上机实验</center>
 
-## 一、常用生物数据库的使用
+## 一、了解常用生物数据库的
 
 ### 1. International Nucleotide Sequence Database Collaboration
 
@@ -84,14 +84,6 @@ Swiss-Prot由Amos Bairoch博士在1986年创建，由瑞士生物信息学研究
 Swiss-Prot条目的注释中使用了一系列序列分析工具。包括手动评估，计算机预测，并选择结果包含在相应的条目中。这些预测包括翻译后修饰，跨膜结构域和拓扑，信号肽，结构域识别和蛋白质家族分类。
 
 来自相同基因和相同物种的序列合并到相同的数据库条目中。确定序列之间的差异包含：可变剪接，自然变异，错误的起始位点，错误的外显子边界，移码，未识别的冲突。
-
-
-### 4. PDB
-
-
-
-
-
 ## 二、NCBI Blast在线工具的使用及结果说明
 ![blast](https://github.com/xujunbi/linux-bioinformatics/blob/master/bioinformatics/Ex_liu/ex1/img/blast.jpg)
 
@@ -103,22 +95,20 @@ BLASTX	|核酸	|蛋白质	|先将核酸序列翻译成蛋白序列（一条核�
 TBLASTN	|蛋白质	|核酸	|将库中的核酸序列翻译成蛋白序列，再同所查序列作蛋白与蛋白的比对。
 TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸序列都翻译成蛋白（每条核酸序列会产生6条可能的蛋白序列），这样每次比对会产生36种比对阵列。
 
-### blastn
-
-|
+### 4. PDB
 
 
 
 
-### blastp
+## 一、实验目的
 
 
+## 二、实验内容
 
+1. NCBI Blast在线工具的使用及结果说明
 
-
-
-
-### blastx
+	1. 获取SARS-CoV-2参考基因组的accession number。打开NCBI主页（[http://www.ncbi.nlm.nih.gov/](http://www.ncbi.nlm.nih.gov/)），在核酸（Nucleotide）数据库查询SARS-CoV-2，找到RefSeq后面的SARS-CoV-2参考基因组的accession number。
+	2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在
 
 
 
@@ -126,15 +116,11 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 
-### tblastn
+## 参考资料
 
 
 
 
-
-
-
-### tblastx
 
 
 
