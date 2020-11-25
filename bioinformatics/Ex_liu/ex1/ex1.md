@@ -108,12 +108,15 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 1. NCBI Blast在线工具的使用及结果说明
 
 	1. 获取SARS-CoV-2参考基因组的accession number。打开NCBI主页（[http://www.ncbi.nlm.nih.gov/](http://www.ncbi.nlm.nih.gov/)），在核酸（Nucleotide）数据库查询SARS-CoV-2，找到RefSeq后面的SARS-CoV-2参考基因组的accession number。
-	2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在
+	2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在Program Selection部分默认选择Highly similar sequences (megablast)。Algorithm parameters部分可调整Max target sequences 改变最终展现的序列的数量。Expect threshold调整E值（默认0.05，改小一点？）。点击blast运行。
+	3. 阅读blast结果
+	4.下载blast结果并保存为FASTA (complete sequence)格式。
 
 
-
-
-
+2. 蛋白质理化性质分析
+	1. 蛋白质氨基酸组成分析。
+	2. 氨基酸的理化性质分析。 
+	3. 蛋白质的亲疏水性分析。 
 
 
 ## 参考资料
