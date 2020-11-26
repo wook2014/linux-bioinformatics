@@ -107,10 +107,10 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 ### 1. NCBI Blast在线工具的使用及结果说明
 
-	1. 获取SARS-CoV-2参考基因组的accession number。打开NCBI主页（[http://www.ncbi.nlm.nih.gov/](http://www.ncbi.nlm.nih.gov/)），在核酸（Nucleotide）数据库查询SARS-CoV-2，找到RefSeq后面的SARS-CoV-2参考基因组的accession number。
-	2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在Program Selection部分默认选择Highly similar sequences (megablast)。Algorithm parameters部分可调整Max target sequences 改变最终展现的序列的数量。Expect threshold调整E值（默认0.05，改小一点？）。点击blast运行。
-	3. 阅读blast结果
-	4.下载blast结果并保存为FASTA (complete sequence)格式。
++ 1. 获取SARS-CoV-2参考基因组的accession number。打开NCBI主页（[http://www.ncbi.nlm.nih.gov/](http://www.ncbi.nlm.nih.gov/)），在核酸（Nucleotide）数据库查询SARS-CoV-2，找到RefSeq后面的SARS-CoV-2参考基因组的accession number。
++ 2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在Program Selection部分默认选择Highly similar sequences (megablast)。Algorithm parameters部分可调整Max target sequences 改变最终展现的序列的数量。Expect threshold调整E值（默认0.05，改小一点？）。点击blast运行。
++ 3. 阅读blast结果
++ 4.下载blast结果并保存为FASTA (complete sequence)格式。
 
 
 ### 2. 基于序列对蛋白质进行理化性质分析
@@ -128,14 +128,16 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 
-2. 氨基酸的理化性质分析。 
+2. 氨基酸的理化性质分析
+[ProtParam](https://web.expasy.org/protparam/)这个工具可以计算分子量、理论等电点、氨基酸的组成、消光系数、原子组成、估计半衰期、稳定指数等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。
+
 3. 蛋白质的亲疏水性分析。 
 
 
 ## 参考资料
-[Compute pI/Mw:计算序列等电点和分子量的工具](https://liucheng.name/862/)
-
-
++ [Compute pI/Mw:计算序列等电点和分子量的工具](https://liucheng.name/862/)
++ [ProtParam预测蛋白质基本理化性质](http://www.bioengx.com/protparam%E9%A2%84%E6%B5%8B%E8%9B%8B%E7%99%BD%E8%B4%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E5%8C%96%E6%80%A7%E8%B4%A8/)
++ [蛋白质分析工具](https://www.genscript.com.cn/protein-analysis.html)
 
 
 
