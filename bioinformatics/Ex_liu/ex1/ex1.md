@@ -88,7 +88,7 @@ Swiss-Prot条目的注释中使用了一系列序列分析工具。包括手动�
 ![blast](https://github.com/xujunbi/linux-bioinformatics/blob/master/bioinformatics/Ex_liu/ex1/img/blast.jpg)
 
 程序名	| 查询序列	|数据库	|搜索方法
-|:--:|:--:|:--:|:--:|
+|:--|:--:|:--:|:--|
 Nucleotide BLAST	|核酸	|核酸	|库中存在的每条已知序列都将同所查序列作一对一地核酸序列比对。
 Protein BLAST	|蛋白质	|蛋白质	|库中存在的每条已知序列将逐一地同每条所查序列作一对一的序列比对。
 BLASTX	|核酸	|蛋白质	|先将核酸序列翻译成蛋白序列（一条核酸序列会被翻译成可能的六条蛋白），再对每一条作一对一的蛋白序列比对。
@@ -105,7 +105,7 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 ## 二、实验内容
 
-1. NCBI Blast在线工具的使用及结果说明
+### 1. NCBI Blast在线工具的使用及结果说明
 
 	1. 获取SARS-CoV-2参考基因组的accession number。打开NCBI主页（[http://www.ncbi.nlm.nih.gov/](http://www.ncbi.nlm.nih.gov/)），在核酸（Nucleotide）数据库查询SARS-CoV-2，找到RefSeq后面的SARS-CoV-2参考基因组的accession number。
 	2. 在线blast操作。打开blast页面[https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)，进入Nucleotide BLAST。在Enter Query Sequence框中输入SARS-CoV-2参考基因组的accession number。在Choose Search Set部分选择默认的数据库。在Program Selection部分默认选择Highly similar sequences (megablast)。Algorithm parameters部分可调整Max target sequences 改变最终展现的序列的数量。Expect threshold调整E值（默认0.05，改小一点？）。点击blast运行。
@@ -113,14 +113,27 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 	4.下载blast结果并保存为FASTA (complete sequence)格式。
 
 
-2. 蛋白质理化性质分析
-	1. 蛋白质氨基酸组成分析。
-	2. 氨基酸的理化性质分析。 
-	3. 蛋白质的亲疏水性分析。 
+### 2. 基于序列对蛋白质进行理化性质分析
+
+(1) 计算序列等电点和分子量
+[Compute pI/MW](https://web.expasy.org/compute_pi/)(theoretical pI (isoelectric point) and Mw (molecular weight))是计算序列的等电点和分子量的小工具。
+
+基本操作
++ 打开网页；
++ 输入的格式可以是UniProtKB/Swiss-Prot的ID号，如ALBU_HUMAN，或UniProt的ID号，如P04406。也可以直接输入序列。注意，仅仅是序列就行了，不是Fasta格式。
++ 运行
++ submit查看整个蛋白质序列的预测结果，也可以选择某一片段。
+
+(2) 蛋白质氨基酸组成分析
+
+
+
+2. 氨基酸的理化性质分析。 
+3. 蛋白质的亲疏水性分析。 
 
 
 ## 参考资料
-
+[Compute pI/Mw:计算序列等电点和分子量的工具](https://liucheng.name/862/)
 
 
 
