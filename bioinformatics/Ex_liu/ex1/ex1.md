@@ -115,7 +115,7 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 ### 2. 基于序列对蛋白质进行理化性质分析
 
-(1) 计算序列等电点和分子量
+(1) 计算序列等电点和分子量  
 [Compute pI/MW](https://web.expasy.org/compute_pi/)(theoretical pI (isoelectric point) and Mw (molecular weight))是计算序列的等电点和分子量的小工具。
 
 基本操作
@@ -129,9 +129,12 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 2. 氨基酸的理化性质分析
-[ProtParam](https://web.expasy.org/protparam/)这个工具可以计算分子量、理论等电点、氨基酸的组成、消光系数、原子组成、估计半衰期、稳定指数等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。
+[ProtParam](https://web.expasy.org/protparam/)这个工具可以计算氨基酸个数(Number of amino acids),蛋白质分子量(Molecular weight)、理论等电点(Theoretical pI)、氨基酸的组成(Amino acid composition)、原子组成(Atomic composition)、总原子数(Total number of atoms)、分子式(Formula)、消光系数(Extinction coefficients)、估计半衰期(Estimated half-life)、不稳定指数(Instability index)、脂肪系数(Aliphatic index)、亲水性平均系数(Grand average of hydropathicity)等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。也可以分析蛋白质的亲疏水性分析。 
 
-3. 蛋白质的亲疏水性分析。 
++ 打开[ProtParam](https://web.expasy.org/protparam/)网站。
++ 输入序列。如果分析SWISS-PROT和TrEMBL数据库中序列，直接填写Swiss-Prot/TrEMBL AC号（accession number）；如果分析新序列，直接在搜索框中粘贴氨基酸序列。
++ 运行
++ submit查看整个蛋白质序列的预测结果，也可以选择某一片段。
 
 
 ## 参考资料
