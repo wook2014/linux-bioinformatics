@@ -101,6 +101,12 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 ## 一、实验目的
+用SARS-CoV-2参考基因组进行在线BLAST。基于在线工具氨基酸序列分析蛋白质的二级结构和三级结构(可以使用受体的序列信息，比如G蛋白偶联受体)。
+
+1. 学习和掌握常见生物数据库的检索
+2. 学习和掌握在线blast的基本使用方法
+3. 学习和掌握基于序列的蛋白质理化性质分析
+4. 学习和掌握基于序列的蛋白质二级和三级结构预测
 
 
 ## 二、实验内容
@@ -125,6 +131,7 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 + submit查看整个蛋白质序列的预测结果，也可以选择某一片段。
 
 (2) 氨基酸的理化性质分析
+
 [ProtParam](https://web.expasy.org/protparam/)这个工具可以计算氨基酸个数(Number of amino acids),蛋白质分子量(Molecular weight)、理论等电点(Theoretical pI)、氨基酸的组成(Amino acid composition)、原子组成(Atomic composition)、总原子数(Total number of atoms)、分子式(Formula)、消光系数(Extinction coefficients)、估计半衰期(Estimated half-life)、不稳定指数(Instability index < 40 -> Stable；>40 -> Unstalbe)、脂肪系数(Aliphatic index)、亲水性平均系数(Grand average of hydropathicity)等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。也可以分析蛋白质的亲疏水性分析。 
 
 + 打开[ProtParam](https://web.expasy.org/protparam/)网站。
@@ -141,6 +148,7 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 + 查看运行结果。切割发生在标记氨基酸的右侧（C端方向）。您可以通过在地图上单击相应的酶名称来显示单个酶的结果。
 
 (4) 蛋白的亲疏水性分析
+
 [ProtScale](https://web.expasy.org/protscale/)可计算和展示所选蛋白的50多种氨基酸标度（Amino acid scale）的图谱，氨基酸标度是给每种氨基酸指定的数值，比如Molecular weight（分子质量）、Number of codon（密码子数）、Bulkiness（膨胀度）等等。最常用的标度是疏水性标度，主要来源于多肽在非极性和极性溶剂中的分配实验数据。如果你对所选标度感兴趣可点击标度名称可进入详情页面，查看具体的氨基酸的标度数值和参考文献，如下图，这里正值的氨基酸具有更大的疏水性，负值越小的氨基酸则更加亲水。
 
 + 打开[ProtScale](https://web.expasy.org/protscale/)网站。
@@ -181,6 +189,7 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 (2) 信号肽分析
+
 信号肽是蛋白质N-末端一段编码长度为5-30的疏水性氨基酸序列，用于引导新合成蛋白质向通路转移的短肽链。信号肽存在于分泌蛋白、跨膜蛋白和真核生物细胞器内的蛋白中。
 
 信号肽指引蛋白质转移的方式有两种：（1）常规的分泌（Sec/secretory）通路；（2）双精氨酸转移（Tat/twin-arginine）通路。前者存在于原核生物蛋白质转移到质膜过程中，以及真核生物蛋白质转移到内质网膜的过程中。后者存在于细菌、古菌、叶绿体和线粒体中，信号肽序列较长、疏水性较弱且尾部区含有两个连续精氨酸。相比于前者转运非折叠蛋白质，后者能转运折叠蛋白质跨越双层脂质膜 。
@@ -189,12 +198,11 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 使用[SignalP 5.0](http://www.cbs.dtu.dk/services/SignalP/)能对原核生物的信号肽Sec/SPI、Sec/SPII和Tat/SPI，和对真核生物仅含有 Sec/SPI信号肽进行预测 。 SignalP 5.0目前不能对Tat/SPII进行预测。此外，由于没有足够大的数据进行训练，SignalP 5.0 也不能对Sec/SPIII进行分析。
 
-
 基本操作：
 
-序列输入。一种是点击 选择文件 直接上传FASTA文件；另一种是将氨基酸序列复制粘贴到“文本框”中。
-物种选择。真核生物（ Eukarya）、革兰氏阳性细菌（Gram-positive）、革兰氏阳性细菌（ Gram-negative）和古细菌（Archaea）
-submit查看信号肽的预测结果。
++ 序列输入。一种是点击 选择文件 直接上传FASTA文件；另一种是将氨基酸序列复制粘贴到“文本框”中。
++ 物种选择。真核生物（ Eukarya）、革兰氏阳性细菌（Gram-positive）、革兰氏阳性细菌（ Gram-negative）和古细菌（Archaea）
++ submit查看信号肽的预测结果。
 
 ### 3. 蛋白质结构预测
 
@@ -224,9 +232,11 @@ SWISS-MODEL
 粘贴序列，填写Project Title和邮箱，点击build model
 > 一般耗时几分钟到半小时不等。运行成功后，所留下的邮箱会收到通知。
 + 结果查看
+	+ Summary 显示预测的基本结果
 > GMQE ：可信度范围为 0-1，值越大表明质量越好; QMEAN：区间-4-0，越接近0，评估待测蛋白与模板蛋白的匹配度越好。
 > GMQE（全球模型质量估计）是一种结合目标-模板对齐方式和模板搜索方法的属性的质量估计。所得的GMQE分数表示为0到1之间的数字，反映了使用该对齐方式和模板构建的模型的预期准确性以及目标的覆盖范围。数字越高表示可靠性越高。
 > QMEAN该模型的得分可与相似大小的实验结构所期望的得分相媲美。0值附近的QMEAN 得分表明模型结构与相似大小的实验结构之间具有良好的一致性。分数为-4.0或以下表示模型的质量较低。
+	+ model 
 
 
 ## 参考资料
@@ -256,17 +266,5 @@ SWISS-MODEL
 
 
 
-
-
-## 三、蛋白质功能与结构的分析
-
-
-
----
-[蛋白质序列基本和特征信息分析](https://cloud.tencent.com/developer/article/1398590)
-
-[一文极速读懂 Uniprot 蛋白质数据库](https://zhuanlan.zhihu.com/p/108602863)
-
-[]()
 
 
