@@ -124,24 +124,56 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 + 运行
 + submit查看整个蛋白质序列的预测结果，也可以选择某一片段。
 
-(2) 蛋白质氨基酸组成分析
-
-
-
-2. 氨基酸的理化性质分析
-[ProtParam](https://web.expasy.org/protparam/)这个工具可以计算氨基酸个数(Number of amino acids),蛋白质分子量(Molecular weight)、理论等电点(Theoretical pI)、氨基酸的组成(Amino acid composition)、原子组成(Atomic composition)、总原子数(Total number of atoms)、分子式(Formula)、消光系数(Extinction coefficients)、估计半衰期(Estimated half-life)、不稳定指数(Instability index)、脂肪系数(Aliphatic index)、亲水性平均系数(Grand average of hydropathicity)等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。也可以分析蛋白质的亲疏水性分析。 
+(2) 氨基酸的理化性质分析
+[ProtParam](https://web.expasy.org/protparam/)这个工具可以计算氨基酸个数(Number of amino acids),蛋白质分子量(Molecular weight)、理论等电点(Theoretical pI)、氨基酸的组成(Amino acid composition)、原子组成(Atomic composition)、总原子数(Total number of atoms)、分子式(Formula)、消光系数(Extinction coefficients)、估计半衰期(Estimated half-life)、不稳定指数(Instability index < 40 -> Stable；>40 -> Unstalbe)、脂肪系数(Aliphatic index)、亲水性平均系数(Grand average of hydropathicity)等等。需要注意的是，如果序列有修饰过的氨基酸残基，则不计算在内。也可以分析蛋白质的亲疏水性分析。 
 
 + 打开[ProtParam](https://web.expasy.org/protparam/)网站。
 + 输入序列。如果分析SWISS-PROT和TrEMBL数据库中序列，直接填写Swiss-Prot/TrEMBL AC号（accession number）；如果分析新序列，直接在搜索框中粘贴氨基酸序列。
 + 运行
 + submit查看整个蛋白质序列的预测结果，也可以选择某一片段。
 
+(3) 预测特定蛋白酶或化学物质可能的裂解位点
+
+[PeptideCutter](https://web.expasy.org/peptide_cutter/)是一个根据蛋白质序列预测特定蛋白酶或化学物质可能的裂解位点。
++ 打开[PeptideCutter](https://web.expasy.org/peptide_cutter/)网站。
++ 输入序列。如果分析SWISS-PROT和TrEMBL数据库中序列，直接填写Swiss-Prot/TrEMBL AC号（accession number）；如果分析新序列，直接在搜索框中粘贴氨基酸序列。
++ 运行。
++ 查看运行结果。切割发生在标记氨基酸的右侧（C端方向）。您可以通过在地图上单击相应的酶名称来显示单个酶的结果。
+
+(4) 蛋白的亲疏水性分析
+[ProtScale](https://web.expasy.org/protscale/)可计算和展示所选蛋白的50多种氨基酸标度（Amino acid scale）的图谱，氨基酸标度是给每种氨基酸指定的数值，比如Molecular weight（分子质量）、Number of codon（密码子数）、Bulkiness（膨胀度）等等。最常用的标度是疏水性标度，主要来源于多肽在非极性和极性溶剂中的分配实验数据。如果你对所选标度感兴趣可点击标度名称可进入详情页面，查看具体的氨基酸的标度数值和参考文献，如下图，这里正值的氨基酸具有更大的疏水性，负值越小的氨基酸则更加亲水。
+
++ 打开[ProtScale](https://web.expasy.org/protscale/)网站。
++ 输入序列。如果分析SWISS-PROT和TrEMBL数据库中序列，直接填写Swiss-Prot/TrEMBL AC号（accession number）；如果分析新序列，直接在搜索框中粘贴氨基酸序列。
++ 选择scale，设定窗口大小等参数。
++ 查看运行结果。
+
+### 3. 蛋白质序列特征分析
+
+(1) 跨膜区分析
+
+[TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)是一个蛋白质的跨膜螺旋预测的工具。
+基本操作：
+打开网址[TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)。
+上传本地的fasta文件或以fasta格式粘贴到输入框即可。如果只有序列，在最上面新建一行，以**>**开头，后面写点啥都行
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 参考资料
 + [Compute pI/Mw:计算序列等电点和分子量的工具](https://liucheng.name/862/)
 + [ProtParam预测蛋白质基本理化性质](http://www.bioengx.com/protparam%E9%A2%84%E6%B5%8B%E8%9B%8B%E7%99%BD%E8%B4%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E5%8C%96%E6%80%A7%E8%B4%A8/)
 + [蛋白质分析工具](https://www.genscript.com.cn/protein-analysis.html)
-
++ [蛋白亲疏水性分析工具](https://www.plob.org/article/14709.html)
 
 
 
@@ -167,18 +199,6 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 ## 三、蛋白质功能与结构的分析
-
-
-### 1. 蛋白质理化性质分析
-
-#### 蛋白质氨基酸组成分析 
-AACompIdent 
-
-#### 氨基酸的理化性质分析 
-ProParam
-
-#### 蛋白质的亲疏水性分析 
-ProtScale 
 
 
 ### 2. 蛋白质序列特征分析
