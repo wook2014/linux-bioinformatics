@@ -160,32 +160,33 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 (1) 跨膜区分析
 
-[TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)是一个蛋白质的跨膜螺旋预测的工具。
++ [TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)
+是一个蛋白质的跨膜螺旋预测的工具。
 基本操作：
-+ 打开网址[TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)。
-+ 上传本地的fasta文件或以fasta格式粘贴到输入框即可。如果只有序列，在最上面新建一行，以 **>** 开头，后面写点啥都行。
-+ Output format保持默认
-+ submit
-+ 结果：序列长度，跨膜螺旋的个数，蛋白质的胞内段、跨膜螺旋、胞外端的氨基酸位置，图示。
+	+ 打开网址[TMHMM](http://www.cbs.dtu.dk/services/TMHMM/)。
+	+ 上传本地的fasta文件或以fasta格式粘贴到输入框即可。如果只有序列，在最上面新建一行，以 **>** 开头，后面写点啥都行。
+	+ Output format保持默认
+	+ submit
+	+ 结果：序列长度，跨膜螺旋的个数，蛋白质的胞内段、跨膜螺旋、胞外端的氨基酸位置，图示。
 
 
-[TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)
-
-基本操作：
-
-+ 打开网址[TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)。
-+ 选择输出格式，跨膜螺旋的最大和最小长度，输入蛋白质ID或者氨基酸序列
-+ submit
-+ 结果：直接查看 **-----> SSTRONGLY prefered model** 部分。看有多少跨膜螺旋。同时有图示。
-
-[CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)
++ [TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)
 
 基本操作：
 
-+ 打开网址[CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)。
-+ 新建prediction，输入氨基酸序列
-+ submit(可分析信号肽)
-+ 结果：不同维度展示预测跨膜结构的结果
+	+ 打开网址[TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)。
+	+ 选择输出格式，跨膜螺旋的最大和最小长度，输入蛋白质ID或者氨基酸序列
+	+ submit
+	+ 结果：直接查看 **-----> SSTRONGLY prefered model** 部分。看有多少跨膜螺旋。同时有图示。
+
+ + [CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)
+
+基本操作：
+
+	+ 打开网址[CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)。
+	+ 新建prediction，输入氨基酸序列
+	+ submit(可分析信号肽)
+	+ 结果：不同维度展示预测跨膜结构的结果
 
 
 (2) 信号肽分析
