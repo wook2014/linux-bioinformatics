@@ -162,15 +162,39 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 
 
 [TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)
+
 基本操作：
+
 + 打开网址[TMPred](https://embnet.vital-it.ch/software/TMPRED_form.html)。
 + 选择输出格式，跨膜螺旋的最大和最小长度，输入蛋白质ID或者氨基酸序列
 + submit
 + 结果：直接查看 **-----> SSTRONGLY prefered model** 部分。看有多少跨膜螺旋。同时有图示。
 
+[CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)
+
+基本操作：
+
++ 打开网址[CCTOP](http://cctop.enzim.ttk.mta.hu/?_=)。
++ 新建prediction，输入氨基酸序列
++ submit(可分析信号肽)
++ 结果：不同维度展示预测跨膜结构的结果
+
 
 (2) 信号肽分析
-[SignalP](http://www.cbs.dtu.dk/services/SignalP/)是一个信号肽预测工具。
+信号肽是蛋白质N-末端一段编码长度为5-30的疏水性氨基酸序列，用于引导新合成蛋白质向通路转移的短肽链。信号肽存在于分泌蛋白、跨膜蛋白和真核生物细胞器内的蛋白中。
+
+信号肽指引蛋白质转移的方式有两种：（1）常规的分泌（Sec/secretory）通路；（2）双精氨酸转移（Tat/twin-arginine）通路。前者存在于原核生物蛋白质转移到质膜过程中，以及真核生物蛋白质转移到内质网膜的过程中。后者存在于细菌、古菌、叶绿体和线粒体中，信号肽序列较长、疏水性较弱且尾部区含有两个连续精氨酸。相比于前者转运非折叠蛋白质，后者能转运折叠蛋白质跨越双层脂质膜 。
+
+信号肽指引蛋白质转运后，将由信号肽酶进行切除。信号肽酶有三种：（1）一型信号肽酶（SPaseI）；（2）二型信号肽酶（SPaseII）；（3）三型信号肽酶（SPaseIII）。大部分信号肽由SPaseI进行移除，SPaseI存在古菌、细菌和真核生物中，且在真核生物的内质网膜上仅存在一型信号肽酶。细菌和古菌脂蛋白的信号肽C端含有一段称为 lipobox 的保守区域，由SPaseII切除其信号肽，且lipobox紧邻切除位点（CS/Cleavage Site）的氨基酸是半胱氨酸，这和锚定到膜的功能是相关的。细菌的四型菌毛蛋白信号肽由SPaseIII进行切除。此外：分泌通路（Sec）相关信号肽能由SPaseI、SPaseII和SPaseIII切除，但是双精氨酸转移（Tat）通路相关信号肽仅由 SPaseI和SPaseII切除。
+
+使用[SignalP 5.0](http://www.cbs.dtu.dk/services/SignalP/)能对原核生物的信号肽Sec/SPI、Sec/SPII和Tat/SPI，和对真核生物仅含有 Sec/SPI信号肽进行预测 。 SignalP 5.0目前不能对Tat/SPII进行预测。此外，由于没有足够大的数据进行训练，SignalP 5.0 也不能对Sec/SPIII进行分析。
+
+
+基本操作：
+
+序列输入。一种是点击 选择文件 直接上传FASTA文件；另一种是将氨基酸序列复制粘贴到“文本框”中。
+物种选择。真核生物（ Eukarya）、革兰氏阳性细菌（Gram-positive）、革兰氏阳性细菌（ Gram-negative）和古细菌（Archaea）
+submit查看信号肽的预测结果。
 
 
 
@@ -181,9 +205,9 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 + [蛋白亲疏水性分析工具](https://www.plob.org/article/14709.html)
 + [TMHMM 2.0--蛋白质的跨膜螺旋预测](https://www.jianshu.com/p/66f63b38f531)
 + [如何使用TMpred进行蛋白质跨膜结构预测](https://jingyan.baidu.com/article/a501d80cd0fffead620f5ed1.html)
-
-
-
++ [使用SignalP对蛋白序列进行信号肽预测](http://www.chenlianfu.com/?m=20190408)
++ [蛋白质二级结构预测方法](https://www.cnblogs.com/renping/p/7017599.html)
++ [如何预测蛋白质三维结构（SWISS-MODEL）](https://zhuanlan.zhihu.com/p/148266792)
 
 
 
@@ -206,28 +230,37 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 ## 三、蛋白质功能与结构的分析
 
 
-### 2. 蛋白质序列特征分析
-
-#### 蛋白质跨膜区的分析
-TMPred
-TMHMM
-
-
-#### 蛋白质信号肽的分析
-SignalP 
-
-
-
 ### 3. 蛋白质结构预测
 
 #### 蛋白质二级结构预测
-PredictProtein
+α螺旋，β折叠， β转角，无规则卷曲（coils）以及模序（motif）等蛋白质局部结构组件。
+
+[PredictProtein](https://login.predictprotein.org/home)可基于氨基酸序列预测蛋白质二级结构。可以获得功能预测、二级结构、基序、二硫键结构、结构域等许多蛋白质序列的结构信息。
+该方法的平均准确率超过72%，最佳残基预测准确率达90%以上。因此，被视为蛋白质二级结构预测的标准。用户需要注册ID、验证E-mail后，才能使用PredictProtein工具。
+
+基本操作
+
++ 注册
++ 输入序列
++ submit，关闭窗口，在My Predictions 里查看。
++ 结果显示
+ 	+ Secondary Structure and Solvent Accessibility ：蛋白质二级结构预测
+	+ Transmembrane Helices ： 跨膜螺旋预测
+	+ Protein Disorder and Flexibility
+	+ Disulphide Bridges ： 二硫键预测
 
 
-
-#### 蛋白质二级结构预测
+#### 蛋白质三级结构预测
 SWISS-MODEL
 
+基本操作
+
+粘贴序列，填写Project Title和邮箱，点击build model
+> 一般耗时几分钟到半小时不等。运行成功后，所留下的邮箱会收到通知。
++ 结果查看
+> GMQE ：可信度范围为 0-1，值越大表明质量越好; QMEAN：区间-4-0，越接近0，评估待测蛋白与模板蛋白的匹配度越好。
+> GMQE（全球模型质量估计）是一种结合目标-模板对齐方式和模板搜索方法的属性的质量估计。所得的GMQE分数表示为0到1之间的数字，反映了使用该对齐方式和模板构建的模型的预期准确性以及目标的覆盖范围。数字越高表示可靠性越高。
+> QMEAN该模型的得分可与相似大小的实验结构所期望的得分相媲美。0值附近的QMEAN 得分表明模型结构与相似大小的实验结构之间具有良好的一致性。分数为-4.0或以下表示模型的质量较低。
 
 ---
 [蛋白质序列基本和特征信息分析](https://cloud.tencent.com/developer/article/1398590)
