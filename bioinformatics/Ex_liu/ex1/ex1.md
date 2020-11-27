@@ -195,8 +195,8 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 使用[SignalP 5.0](http://www.cbs.dtu.dk/services/SignalP/)能对原核生物的信号肽Sec/SPI、Sec/SPII和Tat/SPI，和对真核生物仅含有 Sec/SPI信号肽进行预测 。 SignalP 5.0目前不能对Tat/SPII进行预测。此外，由于没有足够大的数据进行训练，SignalP 5.0 也不能对Sec/SPIII进行分析。
 
 基本操作：
-
-+ 序列输入。一种是点击 选择文件 直接上传FASTA文件；另一种是将氨基酸序列复制粘贴到“文本框”中。
++ 打开网址。
++ 序列输入(以胰岛素为例[Insulin_uniport](https://www.uniprot.org/uniprot/P01308))。一种是点击选择文件直接上传FASTA文件；另一种是将氨基酸序列复制粘贴到“文本框”中。
 + 物种选择。真核生物（ Eukarya）、革兰氏阳性细菌（Gram-positive）、革兰氏阳性细菌（ Gram-negative）和古细菌（Archaea）
 + submit查看信号肽的预测结果。
 
