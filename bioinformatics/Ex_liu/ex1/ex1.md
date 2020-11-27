@@ -196,6 +196,37 @@ TBLASTX	|核酸	|核酸	|此种查询将库中的核酸序列和所查的核酸�
 物种选择。真核生物（ Eukarya）、革兰氏阳性细菌（Gram-positive）、革兰氏阳性细菌（ Gram-negative）和古细菌（Archaea）
 submit查看信号肽的预测结果。
 
+### 3. 蛋白质结构预测
+
+#### (1) 蛋白质二级结构预测
+α螺旋，β折叠， β转角，无规则卷曲（coils）以及模序（motif）等蛋白质局部结构组件。
+
+[PredictProtein](https://login.predictprotein.org/home)可基于氨基酸序列预测蛋白质二级结构。可以获得功能预测、二级结构、基序、二硫键结构、结构域等许多蛋白质序列的结构信息。
+该方法的平均准确率超过72%，最佳残基预测准确率达90%以上。因此，被视为蛋白质二级结构预测的标准。用户需要注册ID、验证E-mail后，才能使用PredictProtein工具。
+
+基本操作
+
++ 注册
++ 输入序列
++ submit，关闭窗口，在My Predictions 里查看。
++ 结果显示
+ 	+ Secondary Structure and Solvent Accessibility ：蛋白质二级结构预测
+	+ Transmembrane Helices ： 跨膜螺旋预测
+	+ Protein Disorder and Flexibility
+	+ Disulphide Bridges ： 二硫键预测
+
+
+#### 蛋白质三级结构预测
+SWISS-MODEL
+
+基本操作
+
+粘贴序列，填写Project Title和邮箱，点击build model
+> 一般耗时几分钟到半小时不等。运行成功后，所留下的邮箱会收到通知。
++ 结果查看
+> GMQE ：可信度范围为 0-1，值越大表明质量越好; QMEAN：区间-4-0，越接近0，评估待测蛋白与模板蛋白的匹配度越好。
+> GMQE（全球模型质量估计）是一种结合目标-模板对齐方式和模板搜索方法的属性的质量估计。所得的GMQE分数表示为0到1之间的数字，反映了使用该对齐方式和模板构建的模型的预期准确性以及目标的覆盖范围。数字越高表示可靠性越高。
+> QMEAN该模型的得分可与相似大小的实验结构所期望的得分相媲美。0值附近的QMEAN 得分表明模型结构与相似大小的实验结构之间具有良好的一致性。分数为-4.0或以下表示模型的质量较低。
 
 
 ## 参考资料
@@ -230,37 +261,6 @@ submit查看信号肽的预测结果。
 ## 三、蛋白质功能与结构的分析
 
 
-### 3. 蛋白质结构预测
-
-#### 蛋白质二级结构预测
-α螺旋，β折叠， β转角，无规则卷曲（coils）以及模序（motif）等蛋白质局部结构组件。
-
-[PredictProtein](https://login.predictprotein.org/home)可基于氨基酸序列预测蛋白质二级结构。可以获得功能预测、二级结构、基序、二硫键结构、结构域等许多蛋白质序列的结构信息。
-该方法的平均准确率超过72%，最佳残基预测准确率达90%以上。因此，被视为蛋白质二级结构预测的标准。用户需要注册ID、验证E-mail后，才能使用PredictProtein工具。
-
-基本操作
-
-+ 注册
-+ 输入序列
-+ submit，关闭窗口，在My Predictions 里查看。
-+ 结果显示
- 	+ Secondary Structure and Solvent Accessibility ：蛋白质二级结构预测
-	+ Transmembrane Helices ： 跨膜螺旋预测
-	+ Protein Disorder and Flexibility
-	+ Disulphide Bridges ： 二硫键预测
-
-
-#### 蛋白质三级结构预测
-SWISS-MODEL
-
-基本操作
-
-粘贴序列，填写Project Title和邮箱，点击build model
-> 一般耗时几分钟到半小时不等。运行成功后，所留下的邮箱会收到通知。
-+ 结果查看
-> GMQE ：可信度范围为 0-1，值越大表明质量越好; QMEAN：区间-4-0，越接近0，评估待测蛋白与模板蛋白的匹配度越好。
-> GMQE（全球模型质量估计）是一种结合目标-模板对齐方式和模板搜索方法的属性的质量估计。所得的GMQE分数表示为0到1之间的数字，反映了使用该对齐方式和模板构建的模型的预期准确性以及目标的覆盖范围。数字越高表示可靠性越高。
-> QMEAN该模型的得分可与相似大小的实验结构所期望的得分相媲美。0值附近的QMEAN 得分表明模型结构与相似大小的实验结构之间具有良好的一致性。分数为-4.0或以下表示模型的质量较低。
 
 ---
 [蛋白质序列基本和特征信息分析](https://cloud.tencent.com/developer/article/1398590)
