@@ -41,28 +41,15 @@
 注册完后，进入Folders。点击data -> upload data -> save
 
 #### 新建task
-点击tasks -> create new task -> 填写task描述 -> 选择数据 -> 选择工具 点击RAxML-HPC2 on XSEDE (8.2.12) -> 设置参数 
 
-具体参数的设置
-+ Maximum Hours to Run (click here for help setting this correctly) ：1
-+ Set a name for output files ：给输出文件命名
-+ Enter the number of patterns in your dataset ：一般省缺就好
-+ Please select the Data Type ：数据类型
-+ 
++ 流程 点击tasks -> create new task -> 填写task描述 -> Select Data 选择数据 -> 选择工具Select Tool 点击RAxML-HPC2 on XSEDE (8.2.12) -> 设置参数 Set Parameters -> Save Parameters -> Save and Run task
 
-
-
-
-
-
-
-
-
-#### 参数设置
-
-
-
-#### 构建进化树
++ 具体参数的设置
+  + Maximum Hours to Run (click here for help setting this correctly) ：1
+  + Set a name for output files ：给输出文件命名
+  + Enter the number of patterns in your dataset ：比对结束后每条序列的长度
+  + Please select the Data Type ：数据类型
+  + Bootstrap iterations (-#|-N) ：Bootstrap Value 设置为1000-1500。
 
 
 结果文件解释
