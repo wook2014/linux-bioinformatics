@@ -65,14 +65,19 @@
 #### 构建进化树
 
 
-
-
-
-
+结果文件解释
+结果文件 | 含义
+:-- | :--
+RAxML_bestTree.ex2.tree | Contains the best-scoring ML tree of a thorough ML analysis. 
+RAxML_bipartitionsBranchLabels.ex2.tree | Contains the same information as the file above, but support values are correctly displayed as Newick branch labels and not node labels! Support values always refer to branches/splits of trees and never to nodes of the tree. Note that, some tree viewers have problems displaying branch labels, they are however part of the standard Newick format. 
+RAxML_bipartitions.ex2.tree |  If you used the -f b option, this file will contain the input tree with confidence values from 0 to 100 drawn on its nodes! It is also printed when -f a -x have been specified, at the end of the analysis the program will draw the BS support values on the best tree found during the ML search.
+RAxML_bootstrap.ex2.tree | If a multiple bootstrap is executed by -# and -b or -x all final bootstrapped trees will be written to this one, single file.
+RAxML_info.ex2.tree |  contains information about the model and algorithm used and how RAxML was called. The final GAMMA-based likelihood(s) as well as the alpha shape parameter(s) are printed to this file. In addition, if the rearrangement setting was determined automatically (-i  has not been used) the rearrangement setting found by the
+program will be indicated. This is the most important output file because it tells you what RAxML did and is always written irrespective of the command line option. In addition it contains information about all other output files that were written by your run.
 
 
 ### 进化树美化
-
+-
 #### 
 2. 打开 Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
 
