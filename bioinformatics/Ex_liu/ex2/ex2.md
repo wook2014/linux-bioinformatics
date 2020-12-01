@@ -99,6 +99,7 @@ RAxML_info.ex2.tree |  contains information about the model and algorithm used a
 
 
 ---
-[FigTree构建进化树（柱状）教程](http://www.360doc.com/content/19/0125/12/52645714_811199917.shtml)
-[一文读懂进化树（图文详解）](https://zhuanlan.zhihu.com/p/141835886)
-
+参考资料
++ [FigTree构建进化树（柱状）教程](http://www.360doc.com/content/19/0125/12/52645714_811199917.shtml)
++ [一文读懂进化树（图文详解](https://zhuanlan.zhihu.com/p/141835886)
++ [BioEdit 7.0.5.3安装、多序列比对及结果导出](http://blog.sciencenet.cn/blog-3375649-1104907.html)
