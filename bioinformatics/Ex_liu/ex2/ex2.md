@@ -16,7 +16,7 @@
 
 #### 多序列比对
 序列导入后，选中全部序列(ctrl+A),点击软件上方Alignment，选择 Align by ClustalW，比对参数保持默认。
-> 如果比对的是蛋白自序列，选择 Align by MUSCLE
+> 如果比对的是蛋白质序列，选择 Align by MUSCLE
 
 比对完成后保存为fasta或meg格式。Data -> Export Alignment -> 导出的格式。
 
@@ -25,7 +25,7 @@
 
 参数选择：进化树评估：Bootstrap method，Bootstrap value 一般选择1000~1500；第一次绘图时建议选择500，这样运行速度会比较快，结果合适再调至1000重新进行进化分析。其余参数保持默认
 
-
+进化树构建好后，导出为nwk格式，方便后面用figtree进行美化
 
 
 
@@ -76,7 +76,7 @@
 #### 
 2. 打开 Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
 
-3.Appearance 标签 Line weight 是调整分支的粗细；
+3.Appearance 标签 Line weight 可调整分支的粗细；
 
 4.Tip lables 标签，加上样本名；还可以改变样本名大小以及颜色；
 
