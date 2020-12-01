@@ -28,9 +28,13 @@
 进化树构建好后，导出为nwk格式，方便后面用figtree进行美化
 
 
-
-
-
+### bioedit多序列比对
+步骤
++ 打开序列
++ Ctrl+A选中全部序列
++ Accessory Application中选中Clustalw Multiple alignmen
++ 设置参数，勾选output
++ 导出比对结果
 
 ### CIPRES在线构建系统发育树
 
@@ -63,27 +67,27 @@ RAxML_info.ex2.tree |  contains information about the model and algorithm used a
 
 
 ### 进化树美化
--
-#### 
-2. 打开 Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
 
-3.Appearance 标签 Line weight 可调整分支的粗细；
+#### figtree
++ Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
 
-4.Tip lables 标签，加上样本名；还可以改变样本名大小以及颜色；
++ Appearance 标签 Line weight 可调整分支的粗细；
 
-5.Node labels 是添加节点标签；可以改变样本名大小以及颜色，sig digits 选项可以改变小数保留位数；
++ Tip lables 标签，加上样本名；还可以改变样本名大小以及颜色；
 
-6.Node shapes 是改变节点形状以及大小；
++ Node labels 是添加节点标签；可以改变样本名大小以及颜色，sig digits 选项可以改变小数保留位数；
 
-7.Branch labels 是添加分支标签，可以改变字体颜色和大小， sig digits 选项可以改变小数保留位数
++ Node shapes 是改变节点形状以及大小；
 
-8.Scale bar 是增加标尺
++ Branch labels 是添加分支标签，可以改变字体颜色和大小， sig digits 选项可以改变小数保留位数
 
-9.Scale axis 是增加最下方的标尺；勾选掉 show grid 选项可以删除竖线部分；
++ Scale bar 是增加标尺
 
-10. Time scale 标签是调节最下方坐标轴的，scale by factor 是默认选项，scale root to 选项可改变轴的最大值。
++ Scale axis 是增加最下方的标尺；勾选掉 show grid 选项可以删除竖线部分；
 
-11.Hilight 标签可以改变分支的颜色；
++ Time scale 标签是调节最下方坐标轴的，scale by factor 是默认选项，scale root to 选项可改变轴的最大值。
+
++ Hilight 标签可以改变分支的颜色；
 
 
 
