@@ -32,15 +32,18 @@
 步骤
 + 打开序列
 + Ctrl+A选中全部序列
-+ Accessory Application中选中Clustalw Multiple alignmen
++ Accessory Application中选中Clustalw Multiple alignment
 + 设置参数，勾选output
 + 导出比对结果
+
+
+### EBI在线工具MAFFT构建进化树
+打开网站[MAFFT](https://www.ebi.ac.uk/Tools/msa/mafft/) -> 选择比对的序列类型 -> 上传或粘贴fasta文件 -> 参数保持默认,输出格式为fasta -> Be notified by email，设置邮箱提醒 -> submit
+比对完后，下载比对结果（Download Alignment File）和进化树文件（Download Phylogenetic Tree Data）
 
 ### CIPRES在线构建系统发育树
 
 **需注册**
-
-
 #### 上传数据
 注册完后，进入Folders。点击data -> upload data -> save
 
@@ -66,28 +69,24 @@ RAxML_bootstrap.ex2.tree | If a multiple bootstrap is executed by -# and -b or -
 RAxML_info.ex2.tree |  contains information about the model and algorithm used and how RAxML was called. The final GAMMA-based likelihood(s) as well as the alpha shape parameter(s) are printed to this file. In addition, if the rearrangement setting was determined automatically (-i  has not been used) the rearrangement setting found by the program will be indicated. This is the most important output file because it tells you what RAxML did and is always written irrespective of the command line option. In addition it contains information about all other output files that were written by your run.
 
 
-### 进化树美化
+### 进化树美化figtree
++ 菜单栏
+ 	+ File 一般是输入、输出，新建、保存，打印等功能
+	+ Edit 复制、粘贴、选择、查找等功能
+	+ Tree 和工具栏功能基本一样，但是有清除功能
+	+ Help 大家都懂~
 
-#### figtree
-+ Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
-
-+ Appearance 标签 Line weight 可调整分支的粗细；
-
-+ Tip lables 标签，加上样本名；还可以改变样本名大小以及颜色；
-
-+ Node labels 是添加节点标签；可以改变样本名大小以及颜色，sig digits 选项可以改变小数保留位数；
-
-+ Node shapes 是改变节点形状以及大小；
-
-+ Branch labels 是添加分支标签，可以改变字体颜色和大小， sig digits 选项可以改变小数保留位数
-
-+ Scale bar 是增加标尺
-
-+ Scale axis 是增加最下方的标尺；勾选掉 show grid 选项可以删除竖线部分；
-
-+ Time scale 标签是调节最下方坐标轴的，scale by factor 是默认选项，scale root to 选项可改变轴的最大值。
-
-+ Hilight 标签可以改变分支的颜色；
++ 工具栏
+	+ Layout 布局标签，红框部分是不同的呈现格式，按要求选择；Zoom 标签是调整图的大小； Expansion 标签是调整图的高度；Fish eye 进行布局调整；Root length 是调节根的长度；Cuevature 是 调整角分支的线条；
+	+ Appearance 标签 Line weight 可调整分支的粗细；
+	+ Tip lables 标签，加上样本名；还可以改变样本名大小以及颜色；
+	+ Node labels 是添加节点标签；可以改变样本名大小以及颜色，sig digits 选项可以改变小数保留位数；
+	+ Node shapes 是改变节点形状以及大小；
+	+ Branch labels 是添加分支标签，可以改变字体颜色和大小， sig digits 选项可以改变小数保留位数
+	+ Scale bar 是增加标尺
+	+ Scale axis 是增加最下方的标尺；勾选掉 show grid 选项可以删除竖线部分；
+	+ Time scale 标签是调节最下方坐标轴的，scale by factor 是默认选项，scale root to 选项可改变轴的最大值。
+	+ Hilight 标签可以改变分支的颜色；
 
 
 
