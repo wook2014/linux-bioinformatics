@@ -7,21 +7,31 @@
 文件：NS.fasta
 
 推荐网站：
-+ EMBL-EBI：https://www.ebi.ac.uk/
-+ CIPRES：http://www.phylo.org/
+EMBL-EBI：https://www.ebi.ac.uk/
+CIPRES：http://www.phylo.org/
 Boostrap 100次，展示bipartionLabel tree
 在Figtree中尝试调整各种参数，观察结果。
 
-2. 蛋白质分析
-+ 是否存在信号肽；
-+ 是否具有跨膜结构；
-+ 利用同源模建，预测蛋白质结构。
-文件：protein.fasta
+Boostrap 100次，展示bipartionLabel tree
 
-在线工具：
-+ http://www.cbs.dtu.dk/services/SignalP/
-+ http://www.cbs.dtu.dk/services/TMHMM/
-+ https://swissmodel.expasy.org/
+在Figtree中尝试调整各种参数，观察结果。
+
+2. 蛋白质分析
+
++ 序列获取
+自行在相关数据库中检索
+
++ 要求
+  + 用在线工具预测其分子量，并与数据库中的记录做对比；
+  + 预测蛋白质的等电点，不同工具预测的结果是否有差异；
+  + 预测蛋白质是否存在信号肽，并与真实情况做对比；
+  + 预测蛋白质是否具有跨膜结构，记录跨膜结构的信息，与真实情况做对比；
+  + 预测蛋白质的二级结构，并与真实情况做对比；
+  + 利用同源模建，预测蛋白质的三级结构。
+
+**说明**
+1. 课后作业共两道题，将操作步骤按顺序截图粘贴到word文件中，上传至课程网站
+2. 进化树相关序列用老师提供的，蛋白质的分析自行检索序列
 
 
 
