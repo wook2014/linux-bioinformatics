@@ -96,6 +96,7 @@ RAxML_info.ex2.tree |  contains information about the model and algorithm used a
 
 
 作业详见
+
 [课后作业](https://github.com/xujunbi/linux-bioinformatics/tree/master/bioinformatics/Ex_liu/ex2/homework)
 
 
