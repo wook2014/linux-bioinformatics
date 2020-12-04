@@ -43,6 +43,8 @@
 打开网站[MAFFT](https://www.ebi.ac.uk/Tools/msa/mafft/) -> 选择比对的序列类型 -> 上传或粘贴fasta文件 -> 参数保持默认,输出格式为fasta -> Be notified by email，设置邮箱提醒 -> submit
 比对完后，下载比对结果（Download Alignment File）。查看构建的进化树，没有
 
+####CIPRES在线构建系统发育树
+
 **[CIPRES](https://www.phylo.org/)需注册**
 #### 上传数据
 注册完后，进入Folders。点击data -> upload data(已比对的fasta文件) -> save
