@@ -9,6 +9,14 @@
 ## 实验内容
 ### MEGA构建系统发育树
 
+> bioedit多序列比对
+> 步骤
+> + 打开序列
+> + Ctrl+A选中全部序列
+> + Accessory Application中选中Clustalw Multiple alignment
+> + 设置参数，勾选output
+> + 导出比对结果
+
 #### 序列导入
 可以通过DATA导入数据也可以通过File导入数据：Open A File/Session。
 
@@ -26,15 +34,6 @@
 参数选择：进化树评估：Bootstrap method，Bootstrap value 一般选择1000~1500；第一次绘图时建议选择500，这样运行速度会比较快，结果合适再调至1000重新进行进化分析。其余参数保持默认
 
 进化树构建好后，导出为nwk格式，方便后面用figtree进行美化
-
-
-### bioedit多序列比对
-步骤
-+ 打开序列
-+ Ctrl+A选中全部序列
-+ Accessory Application中选中Clustalw Multiple alignment
-+ 设置参数，勾选output
-+ 导出比对结果
 
 
 
