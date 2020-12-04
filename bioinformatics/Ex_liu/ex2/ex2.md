@@ -45,7 +45,7 @@
 
 #### CIPRES在线构建系统发育树
 
-**[CIPRES](https://www.phylo.org/)需注册**
+***[CIPRES](https://www.phylo.org/)需注册***
 #### 上传数据
 注册完后，进入Folders。点击data -> upload data(已比对的fasta文件) -> save
 
