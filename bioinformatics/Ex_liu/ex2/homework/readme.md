@@ -7,10 +7,8 @@
 文件：NS.fasta
 
 推荐网站：
-EMBL-EBI：https://www.ebi.ac.uk/
-CIPRES：http://www.phylo.org/
-Boostrap 100次，展示bipartionLabel tree
-在Figtree中尝试调整各种参数，观察结果。
++ EMBL-EBI
++ CIPRES
 
 Boostrap 100次，展示bipartionLabel tree
 
