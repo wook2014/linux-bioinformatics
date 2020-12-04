@@ -29,7 +29,7 @@
 比对完成后保存为fasta或meg格式。Data -> Export Alignment -> 导出的格式。
 
 #### 构建进化树
-导入比对结果，在PHYLOGENY中选择一个算法来构建进化树。
+导入比对结果，在MEGA主界面的PHYLOGENY选项中选择一个算法来构建进化树。
 
 参数选择：进化树评估：Bootstrap method，Bootstrap value 一般选择1000~1500；第一次绘图时建议选择500，这样运行速度会比较快，结果合适再调至1000重新进行进化分析。其余参数保持默认
 
