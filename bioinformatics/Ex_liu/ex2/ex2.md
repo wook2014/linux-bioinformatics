@@ -72,8 +72,8 @@ RAxML_info.ex2.tree |  contains information about the model and algorithm used a
 
 ### 进化树美化figtree
 
-看懂进化树
-![看懂进化树](https://pic2.zhimg.com/v2-f9f3043dd508d5abfcc7b0a9bf2658ad_r.jpg)
+<!--看懂进化树
+![看懂进化树](https://pic2.zhimg.com/v2-f9f3043dd508d5abfcc7b0a9bf2658ad_r.jpg)-->
 + 菜单栏
  	+ File 一般是输入、输出，新建、保存，打印等功能
 	+ Edit 复制、粘贴、选择、查找等功能
