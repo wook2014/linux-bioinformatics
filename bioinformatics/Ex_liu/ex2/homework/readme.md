@@ -10,7 +10,7 @@
 + EMBL-EBI
 + CIPRES
 
-Boostrap 100次，展示bipartionLabel tree
+Boostrap 1000次，展示bipartionLabel tree
 
 在Figtree中尝试调整各种参数，观察结果。
 
