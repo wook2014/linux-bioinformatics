@@ -68,7 +68,7 @@ RAxML_bipartitions.ex2.tree |  If you used the -f b option, this file will conta
 RAxML_bootstrap.ex2.tree | If a multiple bootstrap is executed by -# and -b or -x all final bootstrapped trees will be written to this one, single file.
 RAxML_info.ex2.tree |  contains information about the model and algorithm used and how RAxML was called. The final GAMMA-based likelihood(s) as well as the alpha shape parameter(s) are printed to this file. In addition, if the rearrangement setting was determined automatically (-i  has not been used) the rearrangement setting found by the program will be indicated. This is the most important output file because it tells you what RAxML did and is always written irrespective of the command line option. In addition it contains information about all other output files that were written by your run.
 
-选择RAxML_bipartitionsBranchLabels.ex2.tree。如果figtree打不开这个文件，需要用Notepad++等文本编辑器打开文件：选择正则表达式，`:([\.\d]+)\[(\d+)\]`替换为$2:$1，保存后就可以用Figtree打开。原因是figtree识别newick里节点标号不支持[方括号]。
+选择RAxML_bipartitionsBranchLabels.ex2.tree。如果figtree打不开这个文件，需要用Notepad++等文本编辑器打开文件：选择正则表达式，`:([\.\d]+)\[(\d+)\]`替换为`$2:$1`，保存后就可以用Figtree打开。原因是figtree识别newick里节点标号不支持[方括号]。
 
 ### 进化树美化figtree
 
