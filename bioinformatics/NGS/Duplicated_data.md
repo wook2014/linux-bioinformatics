@@ -8,6 +8,8 @@
 
 4. [测序的PCR duplicates - I](https://www.jianshu.com/p/73483070379b)
 
+5. [四大因素，从源头解析Duplication](https://www.yeasen.com/news/detail/250)
+
 
 
 
