@@ -6,3 +6,8 @@
 
 3. [NGS的duplicate的问题](https://www.cnblogs.com/wangprince2017/p/9796314.html)
 
+4. [测序的PCR duplicates - I](https://www.jianshu.com/p/73483070379b)
+
+
+
+
