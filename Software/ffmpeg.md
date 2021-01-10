@@ -65,6 +65,12 @@ ffmpeg -i audio.mp3 -i video.avi video_audio_mix.mpg
 ffmpeg -r 25 -loop 1 -i 1.jpg -pix_fmt yuv420p -vcodec libx264 -b:v 600k -r:v 25 -preset medium -crf 30 -s 720x576 -vframes 250 -r 25 -t 180 a.mp4
 
 
+---
+参考资料
+1. [给新手的 20 多个 FFmpeg 命令示例](https://zhuanlan.zhihu.com/p/67878761)
 
+1. [FFmpeg 视频处理入门教程](https://www.ruanyifeng.com/blog/2020/01/ffmpeg.html)
+
+1. [学习ffmpeg，整理资料编写技术手册](https://github.com/feixiao/ffmpeg)
 
 
