@@ -80,9 +80,46 @@ head -100 SWTA0402A.bam.stat # 其实也没有100行\笑哭
 
 ## counts定量
 ```bash
-featureCounts -T 20 -p -t exon -g gene_id -a *.gtf ${i}.sorted.bam -o ${i}.counts
-# 命令待改
+# 定量
+featureCounts -T 20 -p -t exon -g gene_id -a *.gtf ${i}.sorted.bam -o ${i}.count
+
+# 推荐这种方式哦
+nohup featureCounts \
+        -T 12 \
+        -p \
+        -t exon \
+        -g gene_id \
+        -a Homo_sapiens.GRCh38.100.chr.gtf \
+        -o all_feature.txt \
+        *.bam &
+
+# -a 输入GTF/GFF基因组注释文件
+# -p 这个参数是针对paired-end数据
+# -F 指定-a注释文件的格式，默认是GTF
+# -g 从注释文件中提取Meta-features信息用于read count，默认是gene_id
+# -t 跟-g一样的意思，其是默认将exon作为一个feature
+# -o 输出文件
+# -T 多线程数
+
+#如果想了解每个基因上的count数，则只需要提取出第1列和第7列的信息
+cut -f 1,7 *.count |grep -v '^#' > *feacture.count
 ```
 
 
+
+
+---
+参考资料
+
+1.[Hisat2+FeatureCounts+DESeq2流程+作图！](https://pzweuj.github.io/2018/07/18/rna-seq-4.html)
+
+1.[用edgeR做差异分析](https://pzweuj.github.io/2018/08/09/edgeR.html)
+
+1.[宏基因组，除去宿主序列](https://pzweuj.github.io/2019/01/28/remove-host.html)
+
+1.[]()
+
+1.[]()
+
+1.[]()
 
