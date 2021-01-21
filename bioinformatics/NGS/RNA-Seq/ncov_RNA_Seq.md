@@ -111,15 +111,15 @@ cut -f 1,7 *.count |grep -v '^#' > *feacture.count
 ---
 参考资料
 
-1.[Hisat2+FeatureCounts+DESeq2流程+作图！](https://pzweuj.github.io/2018/07/18/rna-seq-4.html)
+1. [Hisat2+FeatureCounts+DESeq2流程+作图！](https://pzweuj.github.io/2018/07/18/rna-seq-4.html)
 
-1.[用edgeR做差异分析](https://pzweuj.github.io/2018/08/09/edgeR.html)
+1. [用edgeR做差异分析](https://pzweuj.github.io/2018/08/09/edgeR.html)
 
-1.[宏基因组，除去宿主序列](https://pzweuj.github.io/2019/01/28/remove-host.html)
+1. [宏基因组，除去宿主序列](https://pzweuj.github.io/2019/01/28/remove-host.html)
 
-1.[]()
+1. []()
 
-1.[]()
+1. []()
 
-1.[]()
+1. []()
 
