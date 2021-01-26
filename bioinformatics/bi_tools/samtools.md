@@ -259,7 +259,7 @@ samtools depth tmp.index.bam  >  tmp.depth.bam
 
 [SAM/BAM相关的进阶知识](https://ming-lian.github.io/2019/02/07/Advanced-knowledge-of-SAM/)
 
-
+[宏基因组/转录组去除宿主污染](http://blog.sciencenet.cn/blog-2379401-1268509.html)
 
 
 
