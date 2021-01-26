@@ -15,6 +15,7 @@ bowtie2  -p 8 -x index -1reads1.fq -2 reads2.fq -S out1.sam
 # 非双末端测序
 bowtie2 -x index -U *.fq -S out2.sam
 
+# 参考资料里有管道
 # 局部比对，把长reads比对到参考基因组上
 bowtie2 --local -x index -U longreads.fq -S out3.sam
 
@@ -29,15 +30,22 @@ bowtie2 --local -x index -U longreads.fq -S out3.sam
 
 
 
+---
+参考资料：
 
+1. [管道命令实现比对到格式转化一条龙](https://www.jianshu.com/p/528d45521497)
 
+1. [bowtie2（测序序列与参考序列比对）](https://zhuanlan.zhihu.com/p/91317299)
 
+1. [Bowtie2用法详解](http://www.chenlianfu.com/?p=178)
 
+1. []()
 
+1. []()
 
+1. []()
 
-
-
+1. []()
 
 
 
