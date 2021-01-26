@@ -39,9 +39,9 @@ bowtie2 --local -x index -U longreads.fq -S out3.sam
 
 1. [Bowtie2用法详解](http://www.chenlianfu.com/?p=178)
 
-1. []()
+1. [宏基因组，除去宿主序列](https://pzweuj.github.io/2019/01/28/remove-host.html)
 
-1. []()
+1. [宏基因组/转录组去除宿主污染](http://blog.sciencenet.cn/blog-2379401-1268509.html)
 
 1. []()
 
