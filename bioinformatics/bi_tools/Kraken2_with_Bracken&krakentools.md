@@ -316,3 +316,5 @@ bracken -d ~/dbminikraken2_v1_8GB -i ./out/TEST.report -o ./out/TEST.S.bracken -
 + [Kraken的原理浅析](https://www.jianshu.com/p/eccbc2c616eb)
 
 + [Kraken：使用精确比对的超快速宏基因组序列分类软件](https://blog.csdn.net/woodcorpse/article/details/100542360)
+
++ [Taxa abundance and species diversity from Kraken and Bracken reports](https://github.com/jenniferlu717/Bracken/issues/107)
