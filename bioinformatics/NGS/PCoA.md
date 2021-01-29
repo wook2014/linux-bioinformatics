@@ -6,7 +6,6 @@
 1. [](https://cloud.tencent.com/developer/article/1655658)
 1. [微生物群落差异分析方法大揭秘](https://www.omicshare.com/forum/thread-3251-1-1.html)
 1. [PCA和PCoA图](https://cloud.tencent.com/developer/article/1655658)
-1. []()
-1. []()
+1. [Adonis与ANOSIM检验究竟是什么？](https://www.jianshu.com/p/dfa689f7cafd)
 1. [R包vegan的相似性分析（ANOSIM）判断群落结构差异](https://cloud.tencent.com/developer/article/1667549)
 1. [组间差异分析：Anosim](https://zhuanlan.zhihu.com/p/111985434)
