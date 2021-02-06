@@ -6,19 +6,25 @@ minimap2 -d ref.mmi ref.fa                     # indexing
 minimap2 -a ref.mmi reads.fq > alignment.sam   # alignment
 
 ```
-建立索引
+建立索引后比对（节省每次建索引的时间）
 ```bash
 minimap2 -d co92.min co92.fna
 minimap2 -ax map-ont co92.min ../4.filter/clean.filtlong.fq.gz >s1037.sam
 ```
 
-三代测序的比对
+不建立索引比对
 ```bash
 minimap2 -ax map-pb  ref.fa pacbio-reads.fq > aln.sam   # for PacBio subreads
 minimap2 -ax map-ont ref.fa ont-reads.fq > aln.sam      # for Oxford Nanopore reads 
 # 可以不建立索引吗
 ```
 
+```bash
+minimap2 -ax splice:hq -uf ref.fa iso-seq.fq > aln.sam       # PacBio Iso-seq/traditional cDNA
+minimap2 -ax splice ref.fa nanopore-cdna.fa > aln.sam        # Nanopore 2D cDNA-seq
+minimap2 -ax splice -uf -k14 ref.fa direct-rna.fq > aln.sam  # Nanopore Direct RNA-seq
+minimap2 -ax splice --splice-flank=no SIRV.fa SIRV-seq.fa    # mapping against SIRV control
+```
 常用选项参数
 主要分成五大类，索引（Indexing），回帖（Mapping），比对(Alignment),输入/输出（Input/Output）,预设值（Preset）。
 + -x ：非常中要的一个选项，软件预测的一些值，针对不同的数据选择不同的值
@@ -32,3 +38,17 @@ minimap2 -ax map-ont ref.fa ont-reads.fq > aln.sam      # for Oxford Nanopore re
 + -Q ：sam文件中不输出碱基质量
 + -R ：reads Group信息，与bwa比对中的-R一致
 + -t：线程数，默认为3
+
+最终流程
+```bash
+# 建立参考转录组的mmi索引
+minimap2 -t 10 -k 14 -d index.mmi ref.fa
+# splice-mapping
+for dir in monkey_*
+do
+minimap2 -ax splice -uf -N 32 -k 14 -t 20 index.mmi *.fastq | samtools view -bS > ~/sars_test/sars-cov-2/${dir}.bam; 
+done
+```
+
+
+
