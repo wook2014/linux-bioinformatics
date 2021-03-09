@@ -53,7 +53,7 @@ conda remove package_name
 ---
 1. [anaconda 安装指定源的包](https://www.cnblogs.com/lovychen/p/11738883.html)
 
-
+2. [如何使用yml文件重新创建conda环境？](https://www.coder.work/article/2015418)
 
 
 
