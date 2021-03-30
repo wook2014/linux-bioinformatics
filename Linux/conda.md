@@ -1,5 +1,12 @@
 # <center>基本操作之conda</center>
 
+## 目录
+* [conda下载安装并添加源](#conda下载安装并添加源)
+* [conda环境的创建](#cconda环境的创建)
+* [conda安装包](#conda安装包)
+* [mamba](#mamba)
+* [conda 管理R包](#conda管理R包)
+
 ## conda下载安装并添加源
 ```bash
 # 下载
@@ -80,7 +87,7 @@ conda install -c conda-forge mamba
 mamba install *
 ```
 
-## conda 管理R包
+## conda管理R包
 有些时候，默认的R安装环境对安装某些包不是很友好，此时可以考虑用conda新建一个R环境，并用conda来搜索和安装R包，不用了就可以删掉，似乎来的更快一些。
 ```bash
 # 利用conda搜索R
