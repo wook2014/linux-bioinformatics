@@ -2,6 +2,7 @@
 
 ```bash
 iqtree -h
+Usage: iqtree [-s ALIGNMENT] [-p PARTITION] [-m MODEL] [-t TREE] ...
 -s：序列比对文件（支持多个文件逗号隔开，或者包含比对文件的文件夹），可选PHYLIP、FASTA、NEXUS、CLUSTAL、MSF
 --seqtype：序列类型，可选BIN、DNA、AA、NT2AA、CODON、MORPH默认为自动检测
 -o：外类群列表，不同物种之间逗号隔开
@@ -20,8 +21,20 @@ iqtree -h
 --ancestral：基于经验贝叶斯的祖先状态重建
 ```
 
+```bash
+# iqtree 建树（吴珂版）
+iqtree -T 20 -st DNA -s ${i} -m MFP -bb 1000 -alrt 1000
+
+# iqtree 建树（小明版）
+iqtree -s novel_virus_aligned.fasta -pre novelvirus -bb 1000 -nt AUTO -m JC
+
+# iqtree 建树
+```
 
 
 
 
+---
+参考资料：
 
+1. [文献笔记五十六：武汉新型冠状病毒的进化分析](https://cloud.tencent.com/developer/article/1593331)
