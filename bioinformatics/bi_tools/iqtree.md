@@ -45,6 +45,7 @@ iqtree -T 20 -st DNA -s ${i} -m MFP -bb 1000 -alrt 1000
 iqtree -s novel_virus_aligned.fasta -pre novelvirus -bb 1000 -nt AUTO -m JC
 
 # iqtree 建树
+iqtree -s *.fasta -st DNA -pre hev -o "," -m MFP -bb 1000 -alrt 1000
 ```
 
 
