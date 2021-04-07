@@ -5,13 +5,13 @@ IQTREE是最大似然法进化树构建软件，主要由来自奥地利维也�
 
 + IQ-TREE有四大功能，在很大程度上解决了前面提到的最大似然法建树软件、尤其是速度上的几个缺陷：
 
-	  + 高效建树（efficient tree reconstruction）
+	+ 高效建树（efficient tree reconstruction）
 
-	  + 模型选择（modelfinder: fast and accurate model selection）
+	+ 模型选择（modelfinder: fast and accurate model selection）
 
-	  + 超快自展（ultrafast bootstrap approximation）
+	+ 超快自展（ultrafast bootstrap approximation）
 
-	  + 大型数据（big data analysis）
+	+ 大型数据（big data analysis）
 
 
 输入数据：
