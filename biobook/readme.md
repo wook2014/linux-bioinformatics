@@ -3,6 +3,8 @@
 
 
 ## Linux
++ [Netkiller Linux 手札](https://www.netkiller.cn/linux/index.html)
+
 
 
 ## AWK
