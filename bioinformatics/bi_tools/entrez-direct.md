@@ -86,3 +86,4 @@ elink -db protein -id YP_009134732.1 -target nuccore|efetch -format acc
 
 + [NCBI Entrez direct序列处理小工具](https://www.jieandze1314.com/post/cnposts/91/)
 + [Entrez Direct入门](https://superchao8.github.io/2019/04/11/Entrez%20Direct%E5%85%A5%E9%97%A8/)
++ [玩转 edirect](https://my.oschina.net/indexofire/blog/1492062)
