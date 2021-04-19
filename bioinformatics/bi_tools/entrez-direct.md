@@ -85,3 +85,4 @@ elink -db protein -id YP_009134732.1 -target nuccore|efetch -format acc
  + More info about NCBI Entrez Direct E-utillities is available on the NCBI website. http://www.ncbi.nlm.nih.gov/books/NBK179288/
 
 + [NCBI Entrez direct序列处理小工具](https://www.jieandze1314.com/post/cnposts/91/)
++ [Entrez Direct入门](https://superchao8.github.io/2019/04/11/Entrez%20Direct%E5%85%A5%E9%97%A8/)
