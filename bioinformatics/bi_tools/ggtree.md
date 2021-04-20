@@ -1,6 +1,6 @@
 # ggtree 绘制进化树
 
-# 基本流程
+## 基本流程
 ```R
 # 加载R包
 library("ggtree")
@@ -16,5 +16,6 @@ tree <- groupOTU(tree, groupInfo)
 ggtree(tree, layout="fan", ladderize = FALSE, branch.length = "none",aes(color=group)) + geom_tiplab2(size=3) + theme(legend.position = "right")
 ```
 
-
+## 树的类型
+![](https://pic3.zhimg.com/v2-800f6f1dccd2716ccbe2fd87d99394da_r.jpg)
 
