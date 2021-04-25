@@ -1,4 +1,4 @@
-# < p align="center"> github网页上的Markdown语法注意事项</p>
+# <p align="center"> github网页上的Markdown语法注意事项</p>
 
 在GitHub网页版，不是特别严格的markdown语法，有些是html格式，需要引起注意，慢慢积累吧！
 
