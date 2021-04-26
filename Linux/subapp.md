@@ -37,36 +37,60 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
 ```
 
-## htop
+## 其他软件
++ htop
 
 替代top
 
 
-## exa
++ exa
 
 替代ls
 
 
-## axel
++ axel
 
 替代wget
 
 
 
-## bat
++ bat
 
 替代bat
 
 
-## duf
++ duf
 
 替代du
 
+具体用法：
+下载编译后压缩文件[sub.zip]()
 
-## tmux
 
-替代screen
+```bash
+# zshrc配置文件
 
+# duf
+alias duf='/data/home/xum/app/duf/duf'
+
+# ag
+alias ag='/data/home/xum/app/ag/bin/ag'
+
+# axel
+alias axel='/data/home/xum/app/axel/bin/axel'
+
+# exa
+alias exa='/data/home/xum/app/exa/bin/exa'
+
+# bat
+alias bat='/data/home/xum/app/bat/bat'
+
+# alias
+alias ls='exa'
+alias ll='exa -lh'
+alias la='exa -la'
+
+```
 
 
 
