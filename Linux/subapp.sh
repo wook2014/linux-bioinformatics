@@ -2,7 +2,7 @@
 
 cd ~ && mkdir app
 cd app
-wget -c https://github.com/sdy-xu/bioinformatics/blob/master/Linux/sub.zip
+wget -c https://hub.fastgit.org/sdy-xu/bioinformatics/blob/master/Linux/sub.zip
 unzip sub.zip
 echo "# duf
 alias duf='$HOME/app/duf/duf'
