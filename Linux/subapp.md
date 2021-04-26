@@ -2,6 +2,8 @@
 
 linux自带的软件也许不是特别好用，当然基本使用在日常工作中是够了的，但是本着易于使用的原则，还是推荐用几款更优秀的软件来替代之。
 
+小建议：在家目录下建一个名为app的文件夹，后面的操作会方便很多。
+
 ## zsh
 zsh 用于替代bash，不要问为什么，好用就完了。这个软件还是推荐自行下载安装。
 ```bash
@@ -71,19 +73,19 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
 # zshrc配置文件
 
 # duf
-alias duf='/data/home/xum/app/duf/duf'
+alias duf='$HOME/app/duf/duf'
 
 # ag
-alias ag='/data/home/xum/app/ag/bin/ag'
+alias ag='$HOME/app/ag/bin/ag'
 
 # axel
-alias axel='/data/home/xum/app/axel/bin/axel'
+alias axel='$HOME/app/axel/bin/axel'
 
 # exa
-alias exa='/data/home/xum/app/exa/bin/exa'
+alias exa='$HOME/app/exa/bin/exa'
 
 # bat
-alias bat='/data/home/xum/app/bat/bat'
+alias bat='$HOME/app/bat/bat'
 
 # alias
 alias ls='exa'
