@@ -22,4 +22,4 @@ alias bat='$HOME/app/bat/bat'
 # alias
 alias ls='exa'
 alias ll='exa -lh'
-alias la='exa -la'"
+alias la='exa -la'" >> ~/.bashrc
