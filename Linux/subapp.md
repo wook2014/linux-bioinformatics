@@ -64,7 +64,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
 替代du
 
 具体用法：
-下载编译后压缩文件[sub.zip]()
+下载编译后压缩文件[sub.zip](https://github.com/sdy-xu/bioinformatics/blob/master/Linux/sub.zip)
 
 
 ```bash
