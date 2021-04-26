@@ -37,6 +37,7 @@ git clone https://hub.fastgit.org/zsh-users/zsh-syntax-highlighting.git ${ZSH_CU
 git clone https://hub.fastgit.org/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # 修改~/.zshrc
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
+export TERM=xterm-256color
 ```
 
 ## 其他软件
