@@ -50,7 +50,7 @@ x exa-linux-x86_64-v0.10.1.zip
 mv exa-linux-x86_64-v0.10.1 exa
 
 # zshrc配置文件
-
+echo "
 # htop
 alias htop='$HOME/app/htop/bin/htop'
 # duf
@@ -71,8 +71,7 @@ alias bat='$HOME/app/bat/bat'
 # alias
 alias ls='exa'
 alias ll='exa -lh'
-alias la='exa -la'
-
+alias la='exa -la'" >> ~/.zshrc
 
 
 
