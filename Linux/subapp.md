@@ -41,9 +41,10 @@ zsh install.sh
 git clone https://hub.fastgit.org/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions(命令自动补全)
 git clone https://hub.fastgit.org/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# 修改~/.zshrc
+# 手动修改~/.zshrc
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting z extract)
-export TERM=xterm-256color
+# 添加颜色
+echo "export TERM=xterm-256color" >> ~/.zshrc
 ```
 
 ## 其他软件
