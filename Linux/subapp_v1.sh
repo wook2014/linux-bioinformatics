@@ -53,6 +53,7 @@ mv exa-linux-x86_64-v0.10.1 exa
 echo "
 # htop
 alias htop='$HOME/app/htop/bin/htop'
+
 # duf
 alias duf='$HOME/app/duf/duf'
 
