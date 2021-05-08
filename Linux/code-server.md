@@ -15,24 +15,38 @@ conda search code-server
 
 conda install -c conda-forge code-server
 
-# 运行
+
+
+```
+
+## 运行
+```bash
 code-server
 
 # 会在家目录底下的.config文件夹内生成code-server文件夹，去里面改参数
 第一行改为服务器地址和自己设定的端口
-第三行
-
+第三行改为自己记得住的密码
 ```
 
+## 后台运行
 
+```bash
+# 设置完成后，终止程序
+# 新建tmux 会话（screen也许）
+tmux new -s code
+# 分割会话
+tmux split-windows -h
+# 在会话里运行
+code- server
+# 退出会话
+tmux detach
 
+```
+到此为止应该可以在浏览器上打开code-server了
 
+## python环境搭建
 
-
-
-
-
-
+在拓展商店安装python插件，回头写python脚本时就可以激活这个脚本，在底下状态栏可以选择使用服务器的哪个python解释器。后面就可以作为python的IDE来使用了
 
 
 
