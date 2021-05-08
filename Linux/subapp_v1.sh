@@ -47,7 +47,7 @@ tar -xzf bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
 mv bat-v0.18.0-i686-unknown-linux-gnu bat
 
 # 安装exa
-mkdir exa
+mkdir exa && cd exa
 wget -c https://github.91chifun.workers.dev/https://github.com//ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
 unzip exa-linux-x86_64-v0.10.1.zip
 #mv exa-linux-x86_64-v0.10.1 exa
