@@ -31,6 +31,8 @@ cd the_silver_searcher
 ./build.sh
 ./configure --prefix=$HOME/app/ag
 make && make install
+cd ~/app
+rm -rf the_silver_searcher
 
 # 安装duf
 wget -c https://github.91chifun.workers.dev/https://github.com//muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_x86_64.tar.gz
@@ -38,10 +40,11 @@ x duf_0.6.2_linux_x86_64.tar.gz
 mv duf_0.6.2_linux_x86_64 duf
 
 # bat
+wget -c https://github.91chifun.workers.dev/https://github.com//sharkdp/bat/releases/download/v0.18.0/bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
+x bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
+mv bat-v0.18.0-i686-unknown-linux-gnu bat
 
-
-
-
+# 安装exa
 
 
 
