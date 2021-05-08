@@ -17,6 +17,9 @@ cd zsh
 # 配置，比如将zsh安装到~/app/zsh下
 ./configure --prefix=$HOME/app/zsh
 make && make install
+
+# 确认安装成功
+find ~/app/zsh/bin -name "zsh"
 # 设置开机启动zsh
 echo "
 export PATH=$HOME/app/zsh/bin:$PATH
