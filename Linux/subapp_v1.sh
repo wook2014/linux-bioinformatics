@@ -45,6 +45,37 @@ x bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
 mv bat-v0.18.0-i686-unknown-linux-gnu bat
 
 # 安装exa
+wget -c https://github.91chifun.workers.dev/https://github.com//ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
+x exa-linux-x86_64-v0.10.1.zip
+mv exa-linux-x86_64-v0.10.1 exa
+
+# zshrc配置文件
+
+# htop
+alias htop='$HOME/app/htop/bin/htop'
+# duf
+alias duf='$HOME/app/duf/duf'
+
+# ag
+alias ag='$HOME/app/ag/bin/ag'
+
+# axel
+alias axel='$HOME/app/axel/bin/axel'
+
+# exa
+alias exa='$HOME/app/exa/bin/exa'
+
+# bat
+alias bat='$HOME/app/bat/bat'
+
+# alias
+alias ls='exa'
+alias ll='exa -lh'
+alias la='exa -la'
+
+
+
+
 
 
 
