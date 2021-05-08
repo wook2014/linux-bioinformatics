@@ -18,8 +18,11 @@ cd zsh
 ./configure --prefix=$HOME/app/zsh
 make && make install
 # 设置开机启动zsh
+echo "
 export PATH=$HOME/app/zsh/bin:$PATH
 exec $HOME/app/zsh/bin/zsh
+" >> ~/.zshrc
+
 ```
 请搭配oh-my-zsh服用，效果更佳
 
