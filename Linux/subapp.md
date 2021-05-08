@@ -21,7 +21,7 @@ make && make install
 echo "
 export PATH=$HOME/app/zsh/bin:$PATH
 exec $HOME/app/zsh/bin/zsh
-" >> ~/.zshrc
+" >> ~/.bashrc
 
 ```
 请搭配oh-my-zsh服用，效果更佳
