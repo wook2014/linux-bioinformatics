@@ -16,7 +16,7 @@ rm -rf htop-2.2.0
 
 # 安装axel
 wget -c https://github.91chifun.workers.dev/https://github.com//axel-download-accelerator/axel/releases/download/v2.17.10/axel-2.17.10.tar.gz
-x axel-2.17.10.tar.gz
+tar -xzf axel-2.17.10.tar.gz
 mkdir axel
 cd axel-2.17.10
 ./configure --prefix=$HOME/app/axel
@@ -35,18 +35,20 @@ cd ~/app
 rm -rf the_silver_searcher
 
 # 安装duf
+mkdir duf && cd duf
 wget -c https://github.91chifun.workers.dev/https://github.com//muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_x86_64.tar.gz
-x duf_0.6.2_linux_x86_64.tar.gz
-mv duf_0.6.2_linux_x86_64 duf
+tar -xzf duf_0.6.2_linux_x86_64.tar.gz
+cd ~/app
+#mv duf_0.6.2_linux_x86_64 duf
 
 # bat
 wget -c https://github.91chifun.workers.dev/https://github.com//sharkdp/bat/releases/download/v0.18.0/bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
-x bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
+tar -xzf bat-v0.18.0-i686-unknown-linux-gnu.tar.gz
 mv bat-v0.18.0-i686-unknown-linux-gnu bat
 
 # 安装exa
 wget -c https://github.91chifun.workers.dev/https://github.com//ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
-x exa-linux-x86_64-v0.10.1.zip
+unzip exa-linux-x86_64-v0.10.1.zip
 mv exa-linux-x86_64-v0.10.1 exa
 
 # zshrc配置文件
