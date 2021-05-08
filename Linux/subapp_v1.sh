@@ -1,7 +1,7 @@
 #!/bin/bash
 # 最好先安装zsh并修改插件选项
 # 如果家目录没有app文件夹
-cd ~ && makdir app
+cd ~ && mkdir app
 cd ~/app
 
 # 安装htop
