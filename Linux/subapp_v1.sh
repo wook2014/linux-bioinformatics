@@ -53,6 +53,12 @@ unzip exa-linux-x86_64-v0.10.1.zip
 #mv exa-linux-x86_64-v0.10.1 exa
 cd ~/app
 
+# 安装fd
+wget -c https://github.91chifun.workers.dev/https://github.com//sharkdp/fd/releases/download/v8.2.1/fd-v8.2.1-x86_64-unknown-linux-gnu.tar.gz
+tar -xzf fd-v8.2.1-x86_64-unknown-linux-gnu.tar.gz
+mv fd-v8.2.1-x86_64-unknown-linux-gnu fd
+
+
 # zshrc配置文件
 echo "
 # htop
@@ -72,6 +78,9 @@ alias exa='$HOME/app/exa/bin/exa'
 
 # bat
 alias bat='$HOME/app/bat/bat'
+
+# fd
+alias fd='$HOME/app/fd/fd'
 
 # alias
 alias ls='exa'
