@@ -58,6 +58,24 @@ wget -c https://github.91chifun.workers.dev/https://github.com//sharkdp/fd/relea
 tar -xzf fd-v8.2.1-x86_64-unknown-linux-gnu.tar.gz
 mv fd-v8.2.1-x86_64-unknown-linux-gnu fd
 
+# 安装tmux
+## 先安装依赖
+wget -c https://github.91chifun.workers.dev/https://github.com//libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+tar -xzf libevent-2.1.12-stable.tar.gz
+mkdir libevent
+cd libevent-2.1.12-stable
+./configure --prefix=$HOME/app/libevent
+make && make install
+cd ~/app
+## 安装tmux
+wget -c https://github.91chifun.workers.dev/https://github.com//tmux/tmux/releases/download/3.2/tmux-3.2.tar.gz
+tar -xzf tmux-3.2.tar.gz
+mkdir tmux
+cd tmux-3.2
+LIBEVENT_PATH=$HOME/app/libevent
+./configure --prefix=$HOME/app/tmux CFLAGS="-I$LIBEVENT_PATH/include" LDFLAGS="-L$LIBEVENT_PATH/lib"
+make && make install
+cd ~/app
 
 # zshrc配置文件
 echo "
@@ -81,6 +99,10 @@ alias bat='$HOME/app/bat/bat'
 
 # fd
 alias fd='$HOME/app/fd/fd'
+
+# tmux
+export LD_LIBRARY_PATH=$HOME/app/libevent/lib/:$LD_LIBRARY_PATH
+alias tmux='$HOME/app/tmux/bin/tmux'
 
 # alias
 alias ls='exa'
