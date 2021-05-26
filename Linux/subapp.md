@@ -74,7 +74,7 @@ tmux attach -t name
 更多用法请移步阮一峰大佬处 -> [Tmux 使用教程](http://www.ruanyifeng.com/blog/2019/10/tmux.html)
 
 
-# exa
+## exa
 exa替代ls，已经改了别名了，照着ls用就行
 
 
