@@ -1,4 +1,9 @@
-```
+# <p align='center'>新服务器必装依赖库</p>
+
+
+如果一个新的ubuntu一定要安装一些库,反正做生物信息学数据分析，没有这些库，你总是会遇到各种各样的错误。
+
+```bash
 # added due to some issues during setup of the new HVM host
 sudo apt-get autoclean
 sudo apt-get update
@@ -15,4 +20,6 @@ sudo apt-get install libxml-dom-perl libxml-xpath-perl libjson-perl libxml-libxm
 
 ```
 
-如果一个新的ubuntu一定要安装一些库,反正做生物信息学数据分析，没有这些库，你总是会遇到各种各样的错误。
+---
+参考：
+[新的ubuntu一定要安装一些库 ](http://www.biotrainee.com/thread-2232-1-1.html)
