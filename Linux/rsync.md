@@ -9,3 +9,4 @@ sshpass -p passwd rsync -r -e "ssh -p 22" user@1.1.1.1:/your/dir /local/dir
 ```bash
 sshpass -p passwd rsync -r -e "ssh -p 22" /local/dir user@1.1.1.1:/your/dir 
 ```
+推荐学习阮一峰大佬的教程 ---> [rsync 用法教程](https://www.ruanyifeng.com/blog/2020/08/rsync.html)
