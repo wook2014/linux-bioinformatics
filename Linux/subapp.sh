@@ -66,7 +66,10 @@ mkdir libevent
 cd libevent-2.1.12-stable
 ./configure --prefix=$HOME/app/libevent
 make && make install
+echo "export LD_LIBRARY_PATH=$HOME/app/libevent/lib/:$LD_LIBRARY_PATH" >> ~/.zshrc
+source ~/.zshrc
 cd ~/app
+
 ## 安装tmux
 wget -c https://github.91chifun.workers.dev/https://github.com//tmux/tmux/releases/download/3.2/tmux-3.2.tar.gz
 tar -xzf tmux-3.2.tar.gz
@@ -101,7 +104,6 @@ alias bat='$HOME/app/bat/bat'
 alias fd='$HOME/app/fd/fd'
 
 # tmux
-export LD_LIBRARY_PATH=$HOME/app/libevent/lib/:$LD_LIBRARY_PATH
 alias tmux='$HOME/app/tmux/bin/tmux'
 
 # alias
