@@ -13,5 +13,5 @@
 </p>
 ```
 <p align="center"> 
-<img src="https://ciyuandao-app.oss-cn-beijing.aliyuncs.com/other/ueditor/article/9a9d40490d91467a8411677100b2253f.png">
+<img width="816" height="475" src="https://ciyuandao-app.oss-cn-beijing.aliyuncs.com/other/ueditor/article/9a9d40490d91467a8411677100b2253f.png">
 </p>
