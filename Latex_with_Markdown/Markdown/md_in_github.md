@@ -9,7 +9,7 @@
 2. 图片居中：
 ```html
 <p align="center"> 
-<img src="...">
+<img width="816" height="475" src="...">
 </p>
 ```
 <p align="center"> 
