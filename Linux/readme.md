@@ -1,4 +1,4 @@
-# <p align='center'>Linux 相关操作</p>
+# <p align='center'>Linux 相关整理</p>
 
 + Compression_and_decompression.md 压缩解压命令合集
 + awk.md awk简单语法
