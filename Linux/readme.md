@@ -4,6 +4,9 @@
 + awk.md awk简单语法
 + code-server.md Debian服务器code-server安装教程
 + conda.md conda基本使用教程
++ datamash.md datamash基本使用
++ mobaxterm.md mobaxterm快捷键使用
++ others.md 杂项
 + ps.md 进程管理相关命令
 + regex.md Linux正则表达式
 + screen.md GUN screen基本命令
