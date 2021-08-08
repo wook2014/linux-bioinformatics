@@ -1,1 +1,1 @@
-# <p alpgn="center"> pandoc latex template </p> 
+# <p align="center">pandoc latex template</p> 
