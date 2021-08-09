@@ -322,7 +322,7 @@ cat input.txt | datamash --full strbin 1 | awk '{print > $NF ".txt"}'
 ---
 参考资料：
 1. [在命令行进行简单的统计分析](http://blog.lujun9972.win/blog/2020/08/23/%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%9B%E8%A1%8C%E7%AE%80%E5%8D%95%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/index.html)
-2. []()
+2. [datamash 教程](https://blog.csdn.net/ada0915/article/details/97372309)
 3. []()
 4. []()
 5. []()
