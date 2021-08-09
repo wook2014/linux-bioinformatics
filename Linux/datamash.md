@@ -86,66 +86,228 @@ conda install -c conda-forge datamash=1.7
 
 ## 实例
 注意：以下使用的文件均来自软件(PATH: datamash-1.3/examples)自带的数据集
-
+```
+File: scores.txt
+───────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1   │ Shawn   Arts    65
+   2   │ Marques Arts    58
+   3   │ Fernando    Arts    78
+   4   │ Paul    Arts    63
+   5   │ Walter  Arts    75
+   6   │ Derek   Arts    60
+   7   │ Nathaniel   Arts    88
+   8   │ Tyreque Arts    74
+   9   │ Trevon  Arts    74
+  10   │ Nathan  Arts    71
+  11   │ Zachary Arts    80
+  12   │ Donovan Arts    75
+  13   │ Levi    Arts    76
+  14   │ Sage    Arts    55
+  15   │ Roberto Arts    65
+  16   │ William Arts    46
+  17   │ Nico    Arts    59
+  18   │ Bryan   Arts    68
+  19   │ Isaiah  Arts    80
+  20   │ David   Business    92
+  21   │ Leonard Business    87
+  22   │ Tysza   Business    92
+  23   │ Darren  Business    94
+  24   │ Christian   Business    88
+  25   │ Aaron   Business    83
+  26   │ Kerris  Business    82
+  27   │ Dakota  Business    83
+  28   │ Teriuse Business    94
+  29   │ Caleb   Business    87
+  30   │ Juan    Business    79
+  31   │ Andre   Health-Medicine 72
+  32   │ Diego   Health-Medicine 82
+  33   │ Jonathan    Health-Medicine 100
+  34   │ Kevin   Health-Medicine 100
+  35   │ Patrick Health-Medicine 92
+  36   │ D'Angelo    Health-Medicine 90
+  37   │ Daniel  Health-Medicine 91
+  38   │ Dilan   Health-Medicine 84
+  39   │ Angel   Health-Medicine 100
+  40   │ Peter   Health-Medicine 86
+  41   │ Dalton  Health-Medicine 100
+  42   │ Israel  Health-Medicine 81
+  43   │ Gabriel Health-Medicine 100
+  44   │ Chase   Social-Sciences 27
+  45   │ Leroy   Social-Sciences 74
+  46   │ Jesse   Social-Sciences 32
+ ```
+ 
 1. Summary Statistics
 ```
 # 先排序，然后根据第二字段分组，最后统计分组中第二字段的元素出现的次数
 datamash --sort groupby 2 count 2 < scores.txt
+Arts    19
+Business        11
+Engineering     13
+Health-Medicine 13
+Life-Sciences   12
+Social-Sciences 15
 
 # 先排序，然后根据第二字段分组，最后输出分组中第三字段的最小值和最大值
 datamash --sort groupby 2 min 3 max 3 < scores.txt
+Arts    46      88
+Business        79      94
+Engineering     39      99
+Health-Medicine 72      100
+Life-Sciences   14      91
+Social-Sciences 27      90
 
 # 先排序，然后根据第二字段分组，最后输出分组中第三字段的均值和总体标准偏差
 datamash --sort groupby 2 mean 3 pstdev 3 < scores.txt
+Arts    68.947368421053 10.143567752966
+Business        87.363636363636 4.9409739060732
+Engineering     66.538461538462 19.10141108205
+Health-Medicine 90.615384615385 8.8625266543026
+Life-Sciences   55.333333333333 19.728715675944
+Social-Sciences 60.266666666667 16.643183456165
 
 # 先排序，然后根据第二字段分组，最后输出分组中第三字段的中位数、第一个四分位数值、第三个四分位数值和四分位差
 datamash --sort groupby 2 median 3 q1 3 q3  3 iqr 3  < scores.txt
+Arts    71      61.5    75.5    14
+Business        87      83      92      9
+Engineering     56      51      83      32
+Health-Medicine 91      84      100     16
+Life-Sciences   58.5    44.25   67.75   23.5
+Social-Sciences 62      55      70.5    15.5
 ```
 
 2. Header Lines and Column Names
 ```
+File: scores_h.txt
+───────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1   │ Name    Major   Score
+   2   │ Shawn   Arts    65
+   3   │ Marques Arts    58
+   4   │ Fernando    Arts    78
+   5   │ Paul    Arts    63
+   6   │ Walter  Arts    75
+   7   │ Derek   Arts    60
+   8   │ Nathaniel   Arts    88
+   9   │ Tyreque Arts    74
+  10   │ Trevon  Arts    74
+  11   │ Nathan  Arts    71
+  12   │ Zachary Arts    80
+  13   │ Donovan Arts    75
+  14   │ Levi    Arts    76
+  15   │ Sage    Arts    55
+  16   │ Roberto Arts    65
+  17   │ William Arts    46
+  18   │ Nico    Arts    59
+  19   │ Bryan   Arts    68
+  20   │ Isaiah  Arts    80
+  21   │ David   Business    92
+  22   │ Leonard Business    87
+  23   │ Tysza   Business    92
+  24   │ Darren  Business    94
+  25   │ Christian   Business    88
+  26   │ Aaron   Business    83
+  27   │ Kerris  Business    82
+  28   │ Dakota  Business    83
+  29   │ Teriuse Business    94
+  30   │ Caleb   Business    87
+  31   │ Juan    Business    79
+  32   │ Andre   Health-Medicine 72
+  33   │ Diego   Health-Medicine 82
+  34   │ Jonathan    Health-Medicine 100
+  35   │ Kevin   Health-Medicine 100
+  36   │ Patrick Health-Medicine 92
+  37   │ D'Angelo    Health-Medicine 90
+  38   │ Daniel  Health-Medicine 91
+  39   │ Dilan   Health-Medicine 84
+  40   │ Angel   Health-Medicine 100
+  41   │ Peter   Health-Medicine 86
+  42   │ Dalton  Health-Medicine 100
+  43   │ Israel  Health-Medicine 81
+  44   │ Gabriel Health-Medicine 100
+  45   │ Chase   Social-Sciences 27
+  46   │ Leroy   Social-Sciences 74
+  47   │ Jesse   Social-Sciences 32
+```
+
+```
 #(1) Header Lines
 #如果输入文件中没有表头(列标题)，则可以使用 --header-out 在输出文件的第一行添加表头
 datamash --sort --header-out groupby 2 min  3 max 3 < scores.txt
+GroupBy(field-2)        min(field-3)    max(field-3)
+Arts    46      88
+Business        79      94
+Engineering     39      99
+Health-Medicine 72      100
+Life-Sciences   14      91
+Social-Sciences 27      90
 
 #如果输入文件中有表头(列标题)，则可以使用 --header-in 跳过该行。
 datamash --sort --header-in groupby 2 mean 3 < scores_h.txt
+Arts    68.947368421053
+Business        87.363636363636
+Engineering     66.538461538462
+Health-Medicine 90.615384615385
+Life-Sciences   55.333333333333
+Social-Sciences 60.266666666667
 
 #使用 --header/-H 则可以将输入文件中的表头作为输出文件的表头
 datamash --sort --headers groupby 2 mean 3 < scores_h.txt
+GroupBy(Major)  mean(Score)
+Arts    68.947368421053
+Business        87.363636363636
+Engineering     66.538461538462
+Health-Medicine 90.615384615385
+Life-Sciences   55.333333333333
+Social-Sciences 60.266666666667
 #使用-sH 效果等同于 --sort --headers
 datamash -sH groupby 2 mean 3 < scores_h.txt
 
 #(2) Column Names
 #当输入文件有表头，则也可以使用列名而非对应的列索引数字
 datamash --sort --headers groupby Major mean Score < scores_h.txt
+GroupBy(Major)  mean(Score)
+Arts    68.947368421053
+Business        87.363636363636
+Engineering     66.538461538462
+Health-Medicine 90.615384615385
+Life-Sciences   55.333333333333
+Social-Sciences 60.266666666667
 ```
 3. 字段分隔符
 ```
 # datamash 默认的字段分隔符是TAB， 多个TAB表示多个字段
 printf '1\t\t2\n' | datamash sum 3
+2
 
 printf '1\t\t2\n' | cut -f3
+2
 
 # -W 一个或多个连续空格均被当做一个字段分隔符
 printf '1  \t  2\n' | datamash -W sum 2
+2
 
 printf '1  \t  2\n' | datamash -W sum 3
+# datamash: invalid input: field 3 requested, line 1 has only 2 fields
 
 # -t, 自定义分隔符
 printf '1,10,,100\n' | datamash -t, sum 4
+100
 ```
+
 4. Column Ranges
 ```
 # datamash 对指定列范围的格式类似shell中cut的用法
-seq 100 | paste - - - - | datamash sum 1 sum 2 sum 3 sum 4
-seq 100 | paste - - - - | datamash sum 1,2,3,4
-seq 100 | paste - - - - | datamash sum 1-4
-seq 100 | paste - - - - | datamash sum 1-3,4
+seq 100 | paste - - - - - | datamash sum 1 sum 2 sum 3 sum 4 sum 5
+seq 100 | paste - - - - - | datamash sum 1,2,3,4,5
+seq 100 | paste - - - - - | datamash sum 1-5
+seq 100 | paste - - - - - | datamash sum 1-3,4-5
+970     990     1010    1030    1050
 
-seq 100 | paste - - - - | datamash sum 1-4 mean 1-4
+seq 100 | paste - - - - - | datamash sum 1-5 mean 1-5
+970     990     1010    1030    1050    48.5    49.5    50.5    51.5    52.5
 ```
-
+---
+一下内容暂时不做整理
 5. Transpose and Reverse
 ```
 #(1)Transpose: 转置，类似R中t()函数
