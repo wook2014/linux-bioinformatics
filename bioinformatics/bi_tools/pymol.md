@@ -1,4 +1,4 @@
-<p align="center"># pymol基本使用</p>
+# <p align="center">pymol基本使用</p>
 
 ```
 # 切换目录
