@@ -1,5 +1,6 @@
 # manjaro
 
+
 4.换源
 
 启动terminal，输入：
@@ -114,7 +115,10 @@ $ #然后重启电脑如果提示语言更改，保留旧的名称即可
 
 
 
-
+---
+参考教程：
+1. [Manjaro的初始配置](https://zhuanlan.zhihu.com/p/343125473)
+2. [Manjaro-KDE安装配置全攻略](https://zhuanlan.zhihu.com/p/114296129)
 
 
 
