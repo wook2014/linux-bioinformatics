@@ -47,7 +47,7 @@ paru相比于yay的优势在于可以用一行命令清除系统上所有不需�
 Morganamilo/paru​
 github.com/Morganamilo/paru
 
-5.1安装拼音输入法：
+5.1 安装拼音输入法：
 
 抛弃fcitx4，拥抱fcitx5吧，btw搜狗、百度、google输入法都是垃圾
 
@@ -79,11 +79,31 @@ yay -S rime-cloverpinyin
 yay -S base-devel
 
 
+切换到该输入方案
+
+在用户资料夹下创建 default.custom.yaml ，内容为
+
+patch:
+  "menu/page_size": 8
+  schema_list:
+    - schema: clover
 
 
 
+Manjaro修改主目录为英文
+瓦尔登树
+1
+2018.09.11 22:05:29
+字数 79阅读 15,553
 
+由于经常在终端要操作家目录，中文切换输入法打字很浪费时间，于是把HOME目录改为英文很方便，在网上看了很多都是修改映射文件，但是会出错而且不生效，找到了下面的方法：
 
+$ sudo pacman -S xdg-user-dirs-gtk
+$ export LANG=en_US
+$ xdg-user-dirs-gtk-update
+$ #然后会有个窗口提示语言更改，更新名称即可
+$ export LANG=zh_CN.UTF-8
+$ #然后重启电脑如果提示语言更改，保留旧的名称即可
 
 
 
