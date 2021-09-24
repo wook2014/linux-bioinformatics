@@ -8,7 +8,7 @@ cd ~/app
 wget -qO- wget http://hisham.hm/htop/releases/2.2.0/htop-2.2.0.tar.gz | tar xvz -C .
 mkdir htop
 cd htop-2.2.0/
-./configure --prefix=$HOME/app/htop
+./configure --prefix=$HOME/app/htop --disable-unicode
 make && make install
 cd ~/app
 rm -rf htop-2.2.0
