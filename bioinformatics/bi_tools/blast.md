@@ -1,7 +1,9 @@
 # 本地blast基本操作
 
 ```
-blastn -db uniprot -query *.fasta -outfmt 11 -out "*_blastn@db_name" -num_threads 8
+blastn -db db_path -query *.fasta -outfmt 11 -out "*_blastn@db_name" -num_threads 8
+blastn -db /mnt/db/blast/nt -query final.contigs.fa -outfmt '6 qseqid sseqid stitle pident length mismatch gapopen qstart qend sstart send evalue bitscore' -evalue 1e-10 -num_threads 12 -max_target_seqs 5 -out ./blastn/final.bln
+
 -query 输入文件名，也就是需要比对的序列文件
  -db 格式化后的数据库名称
  -evalue 设定输出结果中的e-value阈值
@@ -25,3 +27,8 @@ blastn -db uniprot -query *.fasta -outfmt 11 -out "*_blastn@db_name" -num_thread
 ```
 
 
+---
+参考资料：
+1. [blast及其格式输出简介](https://www.cnblogs.com/djx571/p/9510550.html)
+
+1. []()

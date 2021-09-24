@@ -29,7 +29,7 @@
 比对完成后保存为fasta或meg格式。Data -> Export Alignment -> 导出的格式。
 
 #### 构建进化树
-导入比对结果，在PHYLOGENY中选择一个算法来构建进化树。
+导入比对结果，在MEGA主界面的PHYLOGENY选项中选择一个算法来构建进化树。
 
 参数选择：进化树评估：Bootstrap method，Bootstrap value 一般选择1000~1500；第一次绘图时建议选择500，这样运行速度会比较快，结果合适再调至1000重新进行进化分析。其余参数保持默认
 
@@ -41,7 +41,7 @@
 
 #### EBI在线工具MAFFT多序列比对
 打开网站[MAFFT](https://www.ebi.ac.uk/Tools/msa/mafft/) -> 选择比对的序列类型 -> 上传或粘贴fasta文件 -> 参数保持默认,输出格式为fasta -> Be notified by email，设置邮箱提醒 -> submit
-比对完后，下载比对结果（Download Alignment File）。查看构建的进化树，没有
+比对完后，下载比对结果（Download Alignment File）。查看构建的进化树，没有设置Bootstrap。
 
 #### CIPRES在线构建系统发育树
 
@@ -70,6 +70,7 @@ RAxML_bipartitions.ex2.tree |  If you used the -f b option, this file will conta
 RAxML_bootstrap.ex2.tree | If a multiple bootstrap is executed by -# and -b or -x all final bootstrapped trees will be written to this one, single file.
 RAxML_info.ex2.tree |  contains information about the model and algorithm used and how RAxML was called. The final GAMMA-based likelihood(s) as well as the alpha shape parameter(s) are printed to this file. In addition, if the rearrangement setting was determined automatically (-i  has not been used) the rearrangement setting found by the program will be indicated. This is the most important output file because it tells you what RAxML did and is always written irrespective of the command line option. In addition it contains information about all other output files that were written by your run.
 
+选择RAxML_bipartitionsBranchLabels.ex2.tree。如果figtree打不开这个文件，需要用Notepad++等文本编辑器打开文件：选择正则表达式，`:([\.\d]+)\[(\d+)\]`替换为`$2:$1`，保存后就可以用Figtree打开。原因是figtree识别newick里节点标号不支持[方括号]。
 
 ### 进化树美化figtree
 
@@ -97,7 +98,9 @@ RAxML_info.ex2.tree |  contains information about the model and algorithm used a
 
 
 
+作业详见
 
+[课后作业](https://github.com/xujunbi/linux-bioinformatics/tree/master/bioinformatics/Ex_liu/ex2/homework)
 
 
 
